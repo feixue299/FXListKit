@@ -120,8 +120,7 @@ extension ListViewManager: UICollectionViewDelegateFlowLayout {
     }
 }
 
-//MARK: UICollectionViewDelegate
-extension ListViewManager {
+extension ListViewManager: UICollectionViewDelegate {
     public func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
         return true
     }
