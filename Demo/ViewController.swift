@@ -24,17 +24,17 @@ class ViewController: UIViewController {
                         view.customView.textAlignment = .center
                         view.customView.text = model
                     }, configPropertyClosure: { property in
-                        property.size = CGSize(width: 120, height: 100)
+                        property.size = .section(value: 5)
                     })
                 }
-            let imageGroup: [Row] = ["2_02", "2_04", "2_05", "2_06",
-                                     "2_02", "2_04", "2_05", "2_06"]
+            let imageGroup: [Row] = ["0", "2_04", "4", "2_06",
+                                     "2_02", "1", "2_05", "5", "2_05"]
                 .map({ UIImage(named: $0)! })
                 .map { image in
                     Row(cellType: CollectionViewCellBox<UIImageView>.self, model: image, configClosure: { view, model in
                         view.customView.image = model
                     }, configPropertyClosure: { property in
-                        property.size = CGSize(width: 64, height: 64)
+                        property.size = .custom(size: image.size)
                     })
                 }
             textGroup.append(contentsOf: imageGroup)

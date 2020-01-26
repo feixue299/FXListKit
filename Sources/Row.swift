@@ -12,7 +12,12 @@ import UIKit
 public struct Row {
     
     public class Property {
-        public var size: CGSize = CGSize(width: 60, height: 60)
+        public enum Size {
+            case section(value: Int)
+            case custom(size: CGSize)
+        }
+        
+        public var size: Size = .custom(size: CGSize(width: 60, height: 60))
         public var canMoveItem: Bool = true
     }
     
