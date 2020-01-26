@@ -11,9 +11,6 @@
 		1F30438023DC970B00003E3B /* FXListKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F30437223DC970B00003E3B /* FXListKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1F30438B23DC981400003E3B /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F30438A23DC981400003E3B /* Section.swift */; };
 		1F30438D23DC9AD800003E3B /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F30438C23DC9AD800003E3B /* Row.swift */; };
-		1F30439023DC9B1D00003E3B /* SectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F30438F23DC9B1D00003E3B /* SectionTests.swift */; };
-		1F30439223DCA04200003E3B /* RowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F30439123DCA04200003E3B /* RowTests.swift */; };
-		1F30439623DCE31000003E3B /* ListViewManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F30439523DCE31000003E3B /* ListViewManagerTests.swift */; };
 		1F30439823DCE32700003E3B /* ListViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F30439723DCE32700003E3B /* ListViewManager.swift */; };
 		1F3043A023DCE8FE00003E3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F30439F23DCE8FE00003E3B /* AppDelegate.swift */; };
 		1F3043A223DCE8FE00003E3B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3043A123DCE8FE00003E3B /* SceneDelegate.swift */; };
@@ -26,6 +23,7 @@
 		1F3043CF23DD091D00003E3B /* CollectionViewCellBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3043CE23DD091D00003E3B /* CollectionViewCellBox.swift */; };
 		1F3043D123DD09F700003E3B /* FXListKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F30436F23DC970B00003E3B /* FXListKit.framework */; };
 		1F3043D223DD09F700003E3B /* FXListKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1F30436F23DC970B00003E3B /* FXListKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1F86367623DE0F3F00F58F3B /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F86367523DE0F3F00F58F3B /* CustomViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,9 +66,6 @@
 		1F30438A23DC981400003E3B /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		1F30438C23DC9AD800003E3B /* Row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Row.swift; sourceTree = "<group>"; };
 		1F30438E23DC9B1D00003E3B /* FXListKitTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FXListKitTests-Bridging-Header.h"; sourceTree = "<group>"; };
-		1F30438F23DC9B1D00003E3B /* SectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTests.swift; sourceTree = "<group>"; };
-		1F30439123DCA04200003E3B /* RowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowTests.swift; sourceTree = "<group>"; };
-		1F30439523DCE31000003E3B /* ListViewManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewManagerTests.swift; sourceTree = "<group>"; };
 		1F30439723DCE32700003E3B /* ListViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewManager.swift; sourceTree = "<group>"; };
 		1F30439D23DCE8FD00003E3B /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F30439F23DCE8FE00003E3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +78,7 @@
 		1F3043C323DCF5F200003E3B /* NSObject+FXClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+FXClass.h"; sourceTree = "<group>"; };
 		1F3043C423DCF5F200003E3B /* NSObject+FXClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FXClass.m"; sourceTree = "<group>"; };
 		1F3043CE23DD091D00003E3B /* CollectionViewCellBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCellBox.swift; sourceTree = "<group>"; };
+		1F86367523DE0F3F00F58F3B /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,9 +143,6 @@
 			isa = PBXGroup;
 			children = (
 				1F30437F23DC970B00003E3B /* Info.plist */,
-				1F30439523DCE31000003E3B /* ListViewManagerTests.swift */,
-				1F30438F23DC9B1D00003E3B /* SectionTests.swift */,
-				1F30439123DCA04200003E3B /* RowTests.swift */,
 				1F30438E23DC9B1D00003E3B /* FXListKitTests-Bridging-Header.h */,
 			);
 			path = FXListKitTests;
@@ -173,6 +166,7 @@
 				1F30439F23DCE8FE00003E3B /* AppDelegate.swift */,
 				1F3043A123DCE8FE00003E3B /* SceneDelegate.swift */,
 				1F3043A323DCE8FE00003E3B /* ViewController.swift */,
+				1F86367523DE0F3F00F58F3B /* CustomViewController.swift */,
 				1F3043A523DCE8FE00003E3B /* Main.storyboard */,
 				1F3043A823DCE90000003E3B /* Assets.xcassets */,
 				1F3043AA23DCE90000003E3B /* LaunchScreen.storyboard */,
@@ -362,9 +356,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F30439223DCA04200003E3B /* RowTests.swift in Sources */,
-				1F30439023DC9B1D00003E3B /* SectionTests.swift in Sources */,
-				1F30439623DCE31000003E3B /* ListViewManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +366,7 @@
 				1F3043A423DCE8FE00003E3B /* ViewController.swift in Sources */,
 				1F3043A023DCE8FE00003E3B /* AppDelegate.swift in Sources */,
 				1F3043A223DCE8FE00003E3B /* SceneDelegate.swift in Sources */,
+				1F86367623DE0F3F00F58F3B /* CustomViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

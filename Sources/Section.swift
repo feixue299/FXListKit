@@ -17,6 +17,8 @@ public struct Section {
         public var inset: UIEdgeInsets = .zero
         public var minimumLineSpacing: CGFloat = 10
         public var minimumInteritemSpacing: CGFloat = 10
+        public var referenceSizeForHeader: CGSize = .zero
+        public var referenceSizeForFooter: CGSize = .zero
     }
     
     public let rows: [Row]

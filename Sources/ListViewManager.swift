@@ -10,12 +10,18 @@ import Foundation
 import UIKit
 
 public class ListViewManager: NSObject {
-    private let sectionGroup: [Section]
+    private var sectionGroup: [Section]
+    private let sectionGroupClosure: () -> [Section]
     private var _registerReuseIdentifierGroup: [String] = []
 
-    public init(_ sectionGroup: () -> [Section]) {
+    public init(_ sectionGroup: @escaping () -> [Section]) {
         self.sectionGroup = sectionGroup()
+        self.sectionGroupClosure = sectionGroup
         super.init()
+    }
+    
+    public func reloadData() {
+        self.sectionGroup = self.sectionGroupClosure()
     }
 }
 
@@ -54,7 +60,7 @@ extension ListViewManager: UICollectionViewDataSource {
     }
 
     public func collectionView(_ collectionView: UICollectionView, canMoveItemAt indexPath: IndexPath) -> Bool {
-        return sectionGroup[indexPath.section].rows[indexPath.row].property.canMoveItem
+        return true
     }
 
     public func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
@@ -71,6 +77,7 @@ extension ListViewManager: UICollectionViewDataSource {
 
 extension ListViewManager: UICollectionViewDelegateFlowLayout {
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
         switch sectionGroup[indexPath.section].rows[indexPath.row].property.size {
         case let .section(value):
             let sectionProperty = sectionGroup[indexPath.section].property
@@ -85,6 +92,10 @@ extension ListViewManager: UICollectionViewDelegateFlowLayout {
             }
         case let .custom(size):
             return size
+        case .single(let height):
+            let sectionProperty = sectionGroup[indexPath.section].property
+            let itemWidth = collectionView.frame.width - sectionProperty.inset.left - sectionProperty.inset.right
+            return CGSize(width: itemWidth, height: height)
         }
     }
 
@@ -101,10 +112,41 @@ extension ListViewManager: UICollectionViewDelegateFlowLayout {
     }
 
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return .zero
+        return sectionGroup[section].property.referenceSizeForHeader
     }
 
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
-        return .zero
+        return sectionGroup[section].property.referenceSizeForFooter
+    }
+}
+
+//MARK: UICollectionViewDelegate
+extension ListViewManager {
+    public func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    public func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
+        
+    }
+    
+    public func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
+        
+    }
+    
+    public func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+        return sectionGroup[indexPath.section].rows[indexPath.row].didSelect != nil
+    }
+    
+    public func collectionView(_ collectionView: UICollectionView, shouldDeselectItemAt indexPath: IndexPath) -> Bool {
+        return sectionGroup[indexPath.section].rows[indexPath.row].didSelect != nil
+    }
+    
+    public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        sectionGroup[indexPath.section].rows[indexPath.row].didSelect?()
+    }
+    
+    public func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        
     }
 }
