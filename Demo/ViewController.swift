@@ -13,15 +13,16 @@ class ViewController: UIViewController {
     struct Model {
         var textGroup: [String]
         var imageGroup: [UIImage]
-        
+
         mutating func random() {
-            for i in 0..<textGroup.count {
-                let j = Int(arc4random()) % textGroup.count
-                textGroup.swapAt(i, j)
-            }
-            for i in 0..<imageGroup.count {
-                let j = Int(arc4random()) % imageGroup.count
-                imageGroup.swapAt(i, j)
+            random(array: &textGroup)
+            random(array: &imageGroup)
+        }
+
+        func random<Element>(array: inout [Element]) {
+            for i in 0 ..< array.count {
+                let j = Int(arc4random()) % array.count
+                array.swapAt(i, j)
             }
         }
     }
@@ -31,21 +32,38 @@ class ViewController: UIViewController {
                                   "go", "PHP", "c", "c#", "c++", "feixue", "aria",
                                   "lisp", "luna"],
                       imageGroup: ["0", "2_04", "4", "2_06",
-                                   "2_02", "1", "2_05", "5", "2_05"].map({ UIImage(named: $0)! }))
+                                   "2_02", "1", "2_05", "5"].map({ UIImage(named: $0)! }))
 
-    lazy var listManager = ListViewManager {
-        [Section { [weak self] property in
-            guard let strongSelf = self else { return [] }
+    lazy var listManager = ListViewManager { [weak self] in
+        guard let strongSelf = self else { return [] }
+        return [Section { property in
             property.minimumInteritemSpacing = 1
             property.minimumLineSpacing = 1
-            return strongSelf.textRowGroup() + strongSelf.imageRowGroup()
+            property.inset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+            return strongSelf.textRowGroup()
+        }, Section { _ in
+            [Row(cellType: CollectionViewCellBox<UILabel>.self, modelConfig: ("single line", { view, model in
+                view.backgroundColor = .white
+                view.customView.textAlignment = .left
+                view.customView.text = model
+                }), configPropertyClosure: { property in
+                    property.size = .single(height: 44)
+                }, didSelect: {
+                    let vc = CustomViewController<UILabel>()
+                    vc.customView.textAlignment = .center
+                    vc.customView.text = "single line"
+                    self?.navigationController?.pushViewController(vc, animated: true)
+            })]
+        }, Section { _ in
+            strongSelf.imageRowGroup()
         }]
     }
+
     var collectionView: UICollectionView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "refresh", style: .plain, target: self, action: #selector(refreshItemTap(sender:)))
 
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: UICollectionViewFlowLayout())
@@ -55,7 +73,7 @@ class ViewController: UIViewController {
         collectionView.dataSource = listManager
         collectionView.delegate = listManager
     }
-    
+
     @objc func refreshItemTap(sender: UIBarButtonItem) {
         model.random()
         listManager.reloadData()
@@ -89,11 +107,11 @@ extension ViewController {
                     view.customView.image = model
                 }), configPropertyClosure: { property in
                     property.size = .custom(size: image.size)
-            }, didSelect: {
-                let vc = CustomViewController<UIImageView>()
-                vc.customView.contentMode = .scaleAspectFit
-                vc.customView.image = image
-                self?.navigationController?.pushViewController(vc, animated: true)
+                }, didSelect: {
+                    let vc = CustomViewController<UIImageView>()
+                    vc.customView.contentMode = .scaleAspectFit
+                    vc.customView.image = image
+                    self?.navigationController?.pushViewController(vc, animated: true)
             })
         }
     }
