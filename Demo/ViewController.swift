@@ -40,7 +40,21 @@ class ViewController: UIViewController {
             property.minimumInteritemSpacing = 1
             property.minimumLineSpacing = 1
             property.inset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-            return strongSelf.textRowGroup()
+            return strongSelf.model.textGroup.map { text in
+                Row(cellType: CollectionViewCellBox<UILabel>.self,
+                    modelConfig: (text, { view, model in
+                        view.backgroundColor = UIColor.white
+                        view.customView.textAlignment = .center
+                        view.customView.text = model
+                    }), configPropertyClosure: { property in
+                        property.size = .section(value: 4)
+                    }, didSelect: {
+                        let vc = CustomViewController<UILabel>()
+                        vc.customView.textAlignment = .center
+                        vc.customView.text = text
+                        self?.navigationController?.pushViewController(vc, animated: true)
+                })
+            }
         }, Section { _ in
             [Row(cellType: CollectionViewCellBox<UILabel>.self, modelConfig: ("single line", { view, model in
                 view.backgroundColor = .white
@@ -55,7 +69,19 @@ class ViewController: UIViewController {
                     self?.navigationController?.pushViewController(vc, animated: true)
             })]
         }, Section { _ in
-            strongSelf.imageRowGroup()
+            strongSelf.model.imageGroup.map { image in
+                Row(cellType: CollectionViewCellBox<UIImageView>.self,
+                    modelConfig: (image, { view, model in
+                        view.customView.image = model
+                    }), configPropertyClosure: { property in
+                        property.size = .custom(size: image.size)
+                    }, didSelect: {
+                        let vc = CustomViewController<UIImageView>()
+                        vc.customView.contentMode = .scaleAspectFit
+                        vc.customView.image = image
+                        self?.navigationController?.pushViewController(vc, animated: true)
+                })
+            }
         }]
     }
 
@@ -78,41 +104,5 @@ class ViewController: UIViewController {
         model.random()
         listManager.reloadData()
         collectionView.reloadData()
-    }
-}
-
-extension ViewController {
-    func textRowGroup() -> [Row] {
-        return model.textGroup.map { [weak self] text in
-            Row(cellType: CollectionViewCellBox<UILabel>.self,
-                modelConfig: (text, { view, model in
-                    view.backgroundColor = UIColor.white
-                    view.customView.textAlignment = .center
-                    view.customView.text = model
-                }), configPropertyClosure: { property in
-                    property.size = .section(value: 4)
-                }, didSelect: {
-                    let vc = CustomViewController<UILabel>()
-                    vc.customView.textAlignment = .center
-                    vc.customView.text = text
-                    self?.navigationController?.pushViewController(vc, animated: true)
-            })
-        }
-    }
-
-    func imageRowGroup() -> [Row] {
-        return model.imageGroup.map { [weak self] image in
-            Row(cellType: CollectionViewCellBox<UIImageView>.self,
-                modelConfig: (image, { view, model in
-                    view.customView.image = model
-                }), configPropertyClosure: { property in
-                    property.size = .custom(size: image.size)
-                }, didSelect: {
-                    let vc = CustomViewController<UIImageView>()
-                    vc.customView.contentMode = .scaleAspectFit
-                    vc.customView.image = image
-                    self?.navigationController?.pushViewController(vc, animated: true)
-            })
-        }
     }
 }
