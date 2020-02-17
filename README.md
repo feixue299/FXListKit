@@ -5,7 +5,7 @@
 For FXListKit, use the following entry in your Podfile:
 
 ```rb
-pod 'FXListKit', '~> 0.1.1'
+pod 'FXListKit', '~> 0.1.2'
 ```
 
 Then run `pod install`.
@@ -16,7 +16,7 @@ Then run `pod install`.
 Make the following entry in your Cartfile:
 
 ```
-github "feixue299/FXListKit" ~>0.1.1
+github "feixue299/FXListKit" ~>0.1.2
 ```
 
 Then run `carthage update`.
@@ -110,15 +110,13 @@ class ViewController: UIViewController {
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: UICollectionViewFlowLayout())
         collectionView.backgroundColor = .systemGroupedBackground
         view.addSubview(collectionView)
-
-        collectionView.dataSource = listManager
-        collectionView.delegate = listManager
+        
+        listManager.configCollectionView(collectionView)
     }
 
     @objc func refreshItemTap(sender: UIBarButtonItem) {
         model.random()
         listManager.reloadData()
-        collectionView.reloadData()
     }
 }
 
