@@ -13,15 +13,23 @@ public class ListViewManager: NSObject {
     private var sectionGroup: [Section]
     private let sectionGroupClosure: () -> [Section]
     private var _registerReuseIdentifierGroup: [String] = []
-
+    private var collectionView: UICollectionView?
+    
     public init(_ sectionGroup: @escaping () -> [Section]) {
         self.sectionGroup = sectionGroup()
         self.sectionGroupClosure = sectionGroup
         super.init()
     }
     
+    public func configCollectionView(_ view: UICollectionView) {
+        view.delegate = self
+        view.dataSource = self
+        collectionView = view
+    }
+    
     public func reloadData() {
         self.sectionGroup = self.sectionGroupClosure()
+        collectionView?.reloadData()
     }
 }
 

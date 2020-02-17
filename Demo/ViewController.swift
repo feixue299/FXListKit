@@ -96,13 +96,11 @@ class ViewController: UIViewController {
         collectionView.backgroundColor = .systemGroupedBackground
         view.addSubview(collectionView)
 
-        collectionView.dataSource = listManager
-        collectionView.delegate = listManager
+        listManager.configCollectionView(collectionView)
     }
 
     @objc func refreshItemTap(sender: UIBarButtonItem) {
         model.random()
         listManager.reloadData()
-        collectionView.reloadData()
     }
 }

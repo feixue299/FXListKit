@@ -8,13 +8,13 @@
 
 Pod::Spec.new do |spec|
   spec.name         = "FXListKit"
-  spec.version      = "0.1.1"
+  spec.version      = "0.1.2"
   spec.summary      = "A data-driven UICollectionView framework for building fast and flexible lists"
   spec.homepage     = "https://github.com/feixue299/FXListKit"
   spec.license      = { :type => "MIT", :file => "LICENSE" }
   spec.author             = { "wupengfei" => "1569485690@qq.com" }
   spec.source       = { :git => "https://github.com/feixue299/FXListKit.git", :tag => "#{spec.version}" }
-  spec.source_files  = "Sources", "Sources/**/*.{h,m}"
+  spec.source_files  = "Sources", "Sources/**/*.{h,m,swift}"
   spec.ios.deployment_target  = '9.0'
   spec.swift_versions = ['4.0', '5.0', '5.1']
 end
