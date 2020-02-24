@@ -56,26 +56,25 @@ class ViewController: UIViewController {
             property.minimumLineSpacing = 1
             property.inset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
             return strongSelf.model.textGroup.map { text in
-                Row(cellType: CollectionViewCellBox<UILabel>.self,
-                    modelConfig: (text, { view, model in
-                        view.backgroundColor = UIColor.white
-                        view.customView.textAlignment = .center
-                        view.customView.text = model
-                    }), configPropertyClosure: { property in
-                        property.size = .section(value: 4)
-                    }, didSelect: {
-                        let vc = CustomViewController<UILabel>()
-                        vc.customView.textAlignment = .center
-                        vc.customView.text = text
-                        self?.navigationController?.pushViewController(vc, animated: true)
+                Row(cellType: CollectionViewCellBox<UILabel>.self, cellConfig: { (view) in
+                    view.backgroundColor = UIColor.white
+                    view.customView.textAlignment = .center
+                    view.customView.text = text
+                }, configPropertyClosure: { (property) in
+                    property.size = .section(value: 4)
+                }, didSelect: {
+                    let vc = CustomViewController<UILabel>()
+                    vc.customView.textAlignment = .center
+                    vc.customView.text = text
+                    self?.navigationController?.pushViewController(vc, animated: true)
                 })
             }
         }, Section { _ in
-            [Row(cellType: CollectionViewCellBox<UILabel>.self, modelConfig: ("single line", { view, model in
+            [Row(cellType: CollectionViewCellBox<UILabel>.self, cellConfig: { view in
                 view.backgroundColor = .white
                 view.customView.textAlignment = .left
-                view.customView.text = model
-                }), configPropertyClosure: { property in
+                view.customView.text = "single line"
+                }, configPropertyClosure: { property in
                     property.size = .single(height: 44)
                 }, didSelect: {
                     let vc = CustomViewController<UILabel>()
@@ -86,9 +85,9 @@ class ViewController: UIViewController {
         }, Section { _ in
             strongSelf.model.imageGroup.map { image in
                 Row(cellType: CollectionViewCellBox<UIImageView>.self,
-                    modelConfig: (image, { view, model in
-                        view.customView.image = model
-                    }), configPropertyClosure: { property in
+                    cellConfig: { view in
+                        view.customView.image = image
+                    }, configPropertyClosure: { property in
                         property.size = .custom(size: image.size)
                     }, didSelect: {
                         let vc = CustomViewController<UIImageView>()
@@ -110,7 +109,7 @@ class ViewController: UIViewController {
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: UICollectionViewFlowLayout())
         collectionView.backgroundColor = .systemGroupedBackground
         view.addSubview(collectionView)
-        
+
         listManager.configCollectionView(collectionView)
     }
 
