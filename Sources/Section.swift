@@ -12,8 +12,6 @@ import UIKit
 public struct Section {
     
     public class Property {
-        public var titleForHeader: String?
-        public var titleForFooter: String?
         public var inset: UIEdgeInsets = .zero
         public var minimumLineSpacing: CGFloat = 10
         public var minimumInteritemSpacing: CGFloat = 10
