@@ -13,7 +13,7 @@ public class ListViewManager: NSObject {
     private var sectionGroup: [Section]
     private let sectionGroupClosure: () -> [Section]
     private var _registerReuseIdentifierGroup: [String] = []
-    private var collectionView: UICollectionView?
+    private weak var collectionView: UICollectionView?
     
     public init(_ sectionGroup: @escaping () -> [Section]) {
         self.sectionGroup = sectionGroup()
