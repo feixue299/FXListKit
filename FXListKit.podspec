@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |spec|
   spec.name         = "FXListKit"
-  spec.version      = "0.1.3"
+  spec.version      = "0.1.4"
   spec.summary      = "A data-driven UICollectionView framework for building fast and flexible lists"
   spec.homepage     = "https://github.com/feixue299/FXListKit"
   spec.license      = { :type => "MIT", :file => "LICENSE" }
