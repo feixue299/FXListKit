@@ -40,20 +40,4 @@ public struct Row {
         configPropertyClosure?(property)
         self.didSelect = didSelect
     }
-
-    public init<View: UIView, Model>(cellType: View.Type,
-                                     modelConfig: (model: Model, configClosure: (_ view: View, _ model: Model) -> Void)? = nil,
-                                     configPropertyClosure: ((_ property: Property) -> Void)? = nil,
-                                     didSelect: (() -> Void)? = nil) {
-        self.cellType = cellType
-        configClosure = { (view: UIView) -> Void in
-            if let vi = view as? View {
-                modelConfig?.configClosure(vi, modelConfig!.model)
-            } else {
-                fatalError("类型不一致")
-            }
-        }
-        configPropertyClosure?(property)
-        self.didSelect = didSelect
-    }
 }
