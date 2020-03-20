@@ -7,20 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F0F9F1D2424A9ED004F076C /* NSObject+FXClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F0F9F162424A9ED004F076C /* NSObject+FXClass.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F0F9F1E2424A9ED004F076C /* NSObject+FXClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F0F9F172424A9ED004F076C /* NSObject+FXClass.m */; };
+		1F0F9F1F2424A9ED004F076C /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0F9F182424A9ED004F076C /* Section.swift */; };
+		1F0F9F202424A9ED004F076C /* ListViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0F9F192424A9ED004F076C /* ListViewManager.swift */; };
+		1F0F9F212424A9ED004F076C /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0F9F1A2424A9ED004F076C /* Row.swift */; };
+		1F0F9F222424A9ED004F076C /* CollectionViewCellBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0F9F1C2424A9ED004F076C /* CollectionViewCellBox.swift */; };
 		1F30437923DC970B00003E3B /* FXListKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F30436F23DC970B00003E3B /* FXListKit.framework */; };
 		1F30438023DC970B00003E3B /* FXListKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F30437223DC970B00003E3B /* FXListKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1F30438B23DC981400003E3B /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F30438A23DC981400003E3B /* Section.swift */; };
-		1F30438D23DC9AD800003E3B /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F30438C23DC9AD800003E3B /* Row.swift */; };
-		1F30439823DCE32700003E3B /* ListViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F30439723DCE32700003E3B /* ListViewManager.swift */; };
 		1F3043A023DCE8FE00003E3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F30439F23DCE8FE00003E3B /* AppDelegate.swift */; };
 		1F3043A223DCE8FE00003E3B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3043A123DCE8FE00003E3B /* SceneDelegate.swift */; };
 		1F3043A423DCE8FE00003E3B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3043A323DCE8FE00003E3B /* ViewController.swift */; };
 		1F3043A723DCE8FE00003E3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F3043A523DCE8FE00003E3B /* Main.storyboard */; };
 		1F3043A923DCE90000003E3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F3043A823DCE90000003E3B /* Assets.xcassets */; };
 		1F3043AC23DCE90000003E3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F3043AA23DCE90000003E3B /* LaunchScreen.storyboard */; };
-		1F3043C523DCF5F200003E3B /* NSObject+FXClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F3043C323DCF5F200003E3B /* NSObject+FXClass.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1F3043C623DCF5F200003E3B /* NSObject+FXClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3043C423DCF5F200003E3B /* NSObject+FXClass.m */; };
-		1F3043CF23DD091D00003E3B /* CollectionViewCellBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3043CE23DD091D00003E3B /* CollectionViewCellBox.swift */; };
 		1F3043D123DD09F700003E3B /* FXListKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F30436F23DC970B00003E3B /* FXListKit.framework */; };
 		1F3043D223DD09F700003E3B /* FXListKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1F30436F23DC970B00003E3B /* FXListKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1F86367623DE0F3F00F58F3B /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F86367523DE0F3F00F58F3B /* CustomViewController.swift */; };
@@ -58,15 +58,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1F0F9F162424A9ED004F076C /* NSObject+FXClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+FXClass.h"; sourceTree = "<group>"; };
+		1F0F9F172424A9ED004F076C /* NSObject+FXClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FXClass.m"; sourceTree = "<group>"; };
+		1F0F9F182424A9ED004F076C /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		1F0F9F192424A9ED004F076C /* ListViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewManager.swift; sourceTree = "<group>"; };
+		1F0F9F1A2424A9ED004F076C /* Row.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Row.swift; sourceTree = "<group>"; };
+		1F0F9F1C2424A9ED004F076C /* CollectionViewCellBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCellBox.swift; sourceTree = "<group>"; };
 		1F30436F23DC970B00003E3B /* FXListKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FXListKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F30437223DC970B00003E3B /* FXListKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FXListKit.h; sourceTree = "<group>"; };
 		1F30437323DC970B00003E3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F30437823DC970B00003E3B /* FXListKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FXListKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F30437F23DC970B00003E3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1F30438A23DC981400003E3B /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
-		1F30438C23DC9AD800003E3B /* Row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Row.swift; sourceTree = "<group>"; };
 		1F30438E23DC9B1D00003E3B /* FXListKitTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FXListKitTests-Bridging-Header.h"; sourceTree = "<group>"; };
-		1F30439723DCE32700003E3B /* ListViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewManager.swift; sourceTree = "<group>"; };
 		1F30439D23DCE8FD00003E3B /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F30439F23DCE8FE00003E3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F3043A123DCE8FE00003E3B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,9 +78,6 @@
 		1F3043A823DCE90000003E3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F3043AB23DCE90000003E3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F3043AD23DCE90000003E3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1F3043C323DCF5F200003E3B /* NSObject+FXClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+FXClass.h"; sourceTree = "<group>"; };
-		1F3043C423DCF5F200003E3B /* NSObject+FXClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FXClass.m"; sourceTree = "<group>"; };
-		1F3043CE23DD091D00003E3B /* CollectionViewCellBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCellBox.swift; sourceTree = "<group>"; };
 		1F86367523DE0F3F00F58F3B /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,6 +108,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F0F9F132424A9ED004F076C /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				1F0F9F142424A9ED004F076C /* FXListKit */,
+			);
+			path = Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		1F0F9F142424A9ED004F076C /* FXListKit */ = {
+			isa = PBXGroup;
+			children = (
+				1F0F9F152424A9ED004F076C /* internal */,
+				1F0F9F182424A9ED004F076C /* Section.swift */,
+				1F0F9F192424A9ED004F076C /* ListViewManager.swift */,
+				1F0F9F1A2424A9ED004F076C /* Row.swift */,
+				1F0F9F1B2424A9ED004F076C /* Views */,
+			);
+			path = FXListKit;
+			sourceTree = "<group>";
+		};
+		1F0F9F152424A9ED004F076C /* internal */ = {
+			isa = PBXGroup;
+			children = (
+				1F0F9F162424A9ED004F076C /* NSObject+FXClass.h */,
+				1F0F9F172424A9ED004F076C /* NSObject+FXClass.m */,
+			);
+			path = internal;
+			sourceTree = "<group>";
+		};
+		1F0F9F1B2424A9ED004F076C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1F0F9F1C2424A9ED004F076C /* CollectionViewCellBox.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		1F30436523DC970B00003E3B = {
 			isa = PBXGroup;
 			children = (
@@ -132,7 +169,7 @@
 		1F30437123DC970B00003E3B /* FXListKit */ = {
 			isa = PBXGroup;
 			children = (
-				1F30438923DC973500003E3B /* Sources */,
+				1F0F9F132424A9ED004F076C /* Sources */,
 				1F30437223DC970B00003E3B /* FXListKit.h */,
 				1F30437323DC970B00003E3B /* Info.plist */,
 			);
@@ -148,18 +185,6 @@
 			path = FXListKitTests;
 			sourceTree = "<group>";
 		};
-		1F30438923DC973500003E3B /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				1F3043C223DCF5A500003E3B /* internal */,
-				1F3043CD23DD08FE00003E3B /* Views */,
-				1F30439723DCE32700003E3B /* ListViewManager.swift */,
-				1F30438A23DC981400003E3B /* Section.swift */,
-				1F30438C23DC9AD800003E3B /* Row.swift */,
-			);
-			path = Sources;
-			sourceTree = SOURCE_ROOT;
-		};
 		1F30439E23DCE8FE00003E3B /* Demo */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,23 +198,6 @@
 				1F3043AD23DCE90000003E3B /* Info.plist */,
 			);
 			path = Demo;
-			sourceTree = "<group>";
-		};
-		1F3043C223DCF5A500003E3B /* internal */ = {
-			isa = PBXGroup;
-			children = (
-				1F3043C323DCF5F200003E3B /* NSObject+FXClass.h */,
-				1F3043C423DCF5F200003E3B /* NSObject+FXClass.m */,
-			);
-			path = internal;
-			sourceTree = "<group>";
-		};
-		1F3043CD23DD08FE00003E3B /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				1F3043CE23DD091D00003E3B /* CollectionViewCellBox.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		1F3043D023DD09F700003E3B /* Frameworks */ = {
@@ -207,7 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F30438023DC970B00003E3B /* FXListKit.h in Headers */,
-				1F3043C523DCF5F200003E3B /* NSObject+FXClass.h in Headers */,
+				1F0F9F1D2424A9ED004F076C /* NSObject+FXClass.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,11 +352,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F30439823DCE32700003E3B /* ListViewManager.swift in Sources */,
-				1F3043CF23DD091D00003E3B /* CollectionViewCellBox.swift in Sources */,
-				1F30438D23DC9AD800003E3B /* Row.swift in Sources */,
-				1F30438B23DC981400003E3B /* Section.swift in Sources */,
-				1F3043C623DCF5F200003E3B /* NSObject+FXClass.m in Sources */,
+				1F0F9F212424A9ED004F076C /* Row.swift in Sources */,
+				1F0F9F222424A9ED004F076C /* CollectionViewCellBox.swift in Sources */,
+				1F0F9F202424A9ED004F076C /* ListViewManager.swift in Sources */,
+				1F0F9F1E2424A9ED004F076C /* NSObject+FXClass.m in Sources */,
+				1F0F9F1F2424A9ED004F076C /* Section.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -620,6 +628,7 @@
 		1F3043BA23DCE90000003E3B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Demo/Info.plist;
@@ -637,6 +646,7 @@
 		1F3043BB23DCE90000003E3B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Demo/Info.plist;
