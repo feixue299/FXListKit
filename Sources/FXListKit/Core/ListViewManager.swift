@@ -6,8 +6,14 @@
 //  Copyright © 2020 Mr.wu. All rights reserved.
 //
 
+#if os(iOS)
+
 import Foundation
 import UIKit
+
+#if canImport(FXListKitInternal)
+import FXListKitInternal
+#endif
 
 //TODO:适配UICollectionViewLayout
 public class ListViewManager: NSObject {
@@ -158,3 +164,5 @@ extension ListViewManager: UICollectionViewDelegate {
         
     }
 }
+
+#endif

@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F0F9F1D2424A9ED004F076C /* NSObject+FXClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F0F9F162424A9ED004F076C /* NSObject+FXClass.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1F0F9F1E2424A9ED004F076C /* NSObject+FXClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F0F9F172424A9ED004F076C /* NSObject+FXClass.m */; };
-		1F0F9F1F2424A9ED004F076C /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0F9F182424A9ED004F076C /* Section.swift */; };
-		1F0F9F202424A9ED004F076C /* ListViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0F9F192424A9ED004F076C /* ListViewManager.swift */; };
-		1F0F9F212424A9ED004F076C /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0F9F1A2424A9ED004F076C /* Row.swift */; };
-		1F0F9F222424A9ED004F076C /* CollectionViewCellBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0F9F1C2424A9ED004F076C /* CollectionViewCellBox.swift */; };
+		1F0F9F2E242544B7004F076C /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0F9F26242544B7004F076C /* Section.swift */; };
+		1F0F9F2F242544B7004F076C /* ListViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0F9F27242544B7004F076C /* ListViewManager.swift */; };
+		1F0F9F30242544B7004F076C /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0F9F28242544B7004F076C /* Row.swift */; };
+		1F0F9F31242544B7004F076C /* NSObject+FXClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F0F9F2A242544B7004F076C /* NSObject+FXClass.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F0F9F32242544B7004F076C /* NSObject+FXClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F0F9F2B242544B7004F076C /* NSObject+FXClass.m */; };
+		1F0F9F33242544B7004F076C /* CollectionViewCellBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0F9F2D242544B7004F076C /* CollectionViewCellBox.swift */; };
 		1F30437923DC970B00003E3B /* FXListKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F30436F23DC970B00003E3B /* FXListKit.framework */; };
 		1F30438023DC970B00003E3B /* FXListKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F30437223DC970B00003E3B /* FXListKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1F3043A023DCE8FE00003E3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F30439F23DCE8FE00003E3B /* AppDelegate.swift */; };
@@ -58,12 +58,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1F0F9F162424A9ED004F076C /* NSObject+FXClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+FXClass.h"; sourceTree = "<group>"; };
-		1F0F9F172424A9ED004F076C /* NSObject+FXClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FXClass.m"; sourceTree = "<group>"; };
-		1F0F9F182424A9ED004F076C /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
-		1F0F9F192424A9ED004F076C /* ListViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewManager.swift; sourceTree = "<group>"; };
-		1F0F9F1A2424A9ED004F076C /* Row.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Row.swift; sourceTree = "<group>"; };
-		1F0F9F1C2424A9ED004F076C /* CollectionViewCellBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCellBox.swift; sourceTree = "<group>"; };
+		1F0F9F26242544B7004F076C /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		1F0F9F27242544B7004F076C /* ListViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewManager.swift; sourceTree = "<group>"; };
+		1F0F9F28242544B7004F076C /* Row.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Row.swift; sourceTree = "<group>"; };
+		1F0F9F2A242544B7004F076C /* NSObject+FXClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+FXClass.h"; sourceTree = "<group>"; };
+		1F0F9F2B242544B7004F076C /* NSObject+FXClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FXClass.m"; sourceTree = "<group>"; };
+		1F0F9F2D242544B7004F076C /* CollectionViewCellBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCellBox.swift; sourceTree = "<group>"; };
 		1F30436F23DC970B00003E3B /* FXListKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FXListKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F30437223DC970B00003E3B /* FXListKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FXListKit.h; sourceTree = "<group>"; };
 		1F30437323DC970B00003E3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -108,39 +108,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1F0F9F132424A9ED004F076C /* Sources */ = {
+		1F0F9F23242544B7004F076C /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				1F0F9F142424A9ED004F076C /* FXListKit */,
+				1F0F9F24242544B7004F076C /* FXListKit */,
 			);
 			path = Sources;
 			sourceTree = SOURCE_ROOT;
 		};
-		1F0F9F142424A9ED004F076C /* FXListKit */ = {
+		1F0F9F24242544B7004F076C /* FXListKit */ = {
 			isa = PBXGroup;
 			children = (
-				1F0F9F152424A9ED004F076C /* internal */,
-				1F0F9F182424A9ED004F076C /* Section.swift */,
-				1F0F9F192424A9ED004F076C /* ListViewManager.swift */,
-				1F0F9F1A2424A9ED004F076C /* Row.swift */,
-				1F0F9F1B2424A9ED004F076C /* Views */,
+				1F0F9F25242544B7004F076C /* Core */,
+				1F0F9F29242544B7004F076C /* internal */,
+				1F0F9F2C242544B7004F076C /* Views */,
 			);
 			path = FXListKit;
 			sourceTree = "<group>";
 		};
-		1F0F9F152424A9ED004F076C /* internal */ = {
+		1F0F9F25242544B7004F076C /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				1F0F9F162424A9ED004F076C /* NSObject+FXClass.h */,
-				1F0F9F172424A9ED004F076C /* NSObject+FXClass.m */,
+				1F0F9F26242544B7004F076C /* Section.swift */,
+				1F0F9F27242544B7004F076C /* ListViewManager.swift */,
+				1F0F9F28242544B7004F076C /* Row.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		1F0F9F29242544B7004F076C /* internal */ = {
+			isa = PBXGroup;
+			children = (
+				1F0F9F2A242544B7004F076C /* NSObject+FXClass.h */,
+				1F0F9F2B242544B7004F076C /* NSObject+FXClass.m */,
 			);
 			path = internal;
 			sourceTree = "<group>";
 		};
-		1F0F9F1B2424A9ED004F076C /* Views */ = {
+		1F0F9F2C242544B7004F076C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1F0F9F1C2424A9ED004F076C /* CollectionViewCellBox.swift */,
+				1F0F9F2D242544B7004F076C /* CollectionViewCellBox.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -169,7 +177,7 @@
 		1F30437123DC970B00003E3B /* FXListKit */ = {
 			isa = PBXGroup;
 			children = (
-				1F0F9F132424A9ED004F076C /* Sources */,
+				1F0F9F23242544B7004F076C /* Sources */,
 				1F30437223DC970B00003E3B /* FXListKit.h */,
 				1F30437323DC970B00003E3B /* Info.plist */,
 			);
@@ -215,7 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F30438023DC970B00003E3B /* FXListKit.h in Headers */,
-				1F0F9F1D2424A9ED004F076C /* NSObject+FXClass.h in Headers */,
+				1F0F9F31242544B7004F076C /* NSObject+FXClass.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,11 +360,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F0F9F212424A9ED004F076C /* Row.swift in Sources */,
-				1F0F9F222424A9ED004F076C /* CollectionViewCellBox.swift in Sources */,
-				1F0F9F202424A9ED004F076C /* ListViewManager.swift in Sources */,
-				1F0F9F1E2424A9ED004F076C /* NSObject+FXClass.m in Sources */,
-				1F0F9F1F2424A9ED004F076C /* Section.swift in Sources */,
+				1F0F9F32242544B7004F076C /* NSObject+FXClass.m in Sources */,
+				1F0F9F33242544B7004F076C /* CollectionViewCellBox.swift in Sources */,
+				1F0F9F2F242544B7004F076C /* ListViewManager.swift in Sources */,
+				1F0F9F30242544B7004F076C /* Row.swift in Sources */,
+				1F0F9F2E242544B7004F076C /* Section.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

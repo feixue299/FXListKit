@@ -6,6 +6,8 @@
 //  Copyright © 2020 Mr.wu. All rights reserved.
 //
 
+#if os(iOS)
+
 import Foundation
 import UIKit
 
@@ -41,3 +43,5 @@ public struct Row {
         self.didSelect = didSelect
     }
 }
+
+#endif

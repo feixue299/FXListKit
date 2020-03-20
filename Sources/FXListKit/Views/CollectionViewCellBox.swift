@@ -6,6 +6,8 @@
 //  Copyright © 2020 Mr.wu. All rights reserved.
 //
 
+#if os(iOS)
+
 import UIKit
 
 public class CollectionViewCellBox<View: UIView>: UICollectionViewCell {
@@ -29,3 +31,5 @@ public class CollectionViewCellBox<View: UIView>: UICollectionViewCell {
     }
     
 }
+
+#endif
