@@ -31,23 +31,13 @@ Then run `carthage update`.
 Create a `Package.swift` file.
 
 ```swift
-// swift-tools-version:5.0
-
-import PackageDescription
-
 let package = Package(
-  name: "RxTestProject",
-  dependencies: [
-    .package(url: "https://github.com/feixue299/FXListKit.git", from: "0.1.6")
-  ],
-  targets: [
-    .target(name: "RxTestProject", dependencies: ["RxSwift", "RxCocoa"])
-  ]
+    // 5.1.0 ..< 6.0.0
+    dependencies: [
+        .package(url: "https://github.com/feixue299/FXListKit.git", from: "5.1.0")
+    ],
+    // ...
 )
-```
-
-```bash
-$ swift build
 ```
 
 ## Example
