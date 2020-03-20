@@ -1,5 +1,10 @@
 # FXListKit
+
+## Requirements
+- iOS 9.0+
  
+## Installation
+
 ### CocoaPods
 
 For FXListKit, use the following entry in your Podfile:
