@@ -10,7 +10,7 @@
 For FXListKit, use the following entry in your Podfile:
 
 ```rb
-pod 'FXListKit', '~> 0.1.5'
+pod 'FXListKit', '~> 0.1.6'
 ```
 
 Then run `pod install`.
@@ -21,10 +21,34 @@ Then run `pod install`.
 Make the following entry in your Cartfile:
 
 ```
-github "feixue299/FXListKit" ~>0.1.5
+github "feixue299/FXListKit" ~>0.1.6
 ```
 
 Then run `carthage update`.
+
+### [Swift Package Manager](https://github.com/apple/swift-package-manager)
+
+Create a `Package.swift` file.
+
+```swift
+// swift-tools-version:5.0
+
+import PackageDescription
+
+let package = Package(
+  name: "RxTestProject",
+  dependencies: [
+    .package(url: "https://github.com/feixue299/FXListKit.git", from: "0.1.6")
+  ],
+  targets: [
+    .target(name: "RxTestProject", dependencies: ["RxSwift", "RxCocoa"])
+  ]
+)
+```
+
+```bash
+$ swift build
+```
 
 ## Example
 ### UICollectionView
