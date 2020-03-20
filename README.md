@@ -32,7 +32,6 @@ Create a `Package.swift` file.
 
 ```swift
 let package = Package(
-    // 5.1.0 ..< 6.0.0
     dependencies: [
         .package(url: "https://github.com/feixue299/FXListKit.git", from: "0.1.6")
     ],
