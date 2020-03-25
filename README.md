@@ -1,7 +1,8 @@
 # FXListKit
 
-## TODO
-- [ ] 适配UICollectionViewLayout
+## Features
+- [ ] adapter UICollectionViewLayout
+- [ ] Update with animation
 
 ## Requirements
 - iOS 9.0+
