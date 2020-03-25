@@ -12,9 +12,6 @@ let package = Package(
         .library(
             name: "FXListKit",
             targets: ["FXListKit"]),
-        .library(
-            name: "FXListKitInternal",
-            targets: ["FXListKitInternal"])
     ],
     targets: [
         .target(name: "FXListKitInternal",

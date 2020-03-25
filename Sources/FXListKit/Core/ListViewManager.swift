@@ -15,7 +15,6 @@ import UIKit
 import FXListKitInternal
 #endif
 
-//TODO:适配UICollectionViewLayout
 public class ListViewManager: NSObject {
     private var sectionGroup: [Section]
     private let sectionGroupClosure: () -> [Section]
