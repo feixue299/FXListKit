@@ -16,10 +16,13 @@ import FXListKitInternal
 #endif
 
 public class ListViewManager: NSObject {
+    public var dataSource: [Section] {
+        return sectionGroup
+    }
     private var sectionGroup: [Section]
     private let sectionGroupClosure: () -> [Section]
     private var _registerReuseIdentifierGroup: [String] = []
-    private weak var collectionView: UICollectionView?
+    public private(set) weak var collectionView: UICollectionView?
     
     public init(_ sectionGroup: @escaping () -> [Section]) {
         self.sectionGroup = sectionGroup()
@@ -34,8 +37,12 @@ public class ListViewManager: NSObject {
     }
     
     public func reloadData() {
-        self.sectionGroup = self.sectionGroupClosure()
+        generateDataSource()
         collectionView?.reloadData()
+    }
+    
+    public func generateDataSource() {
+        self.sectionGroup = self.sectionGroupClosure()
     }
 }
 

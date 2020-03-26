@@ -44,4 +44,20 @@ public struct Row {
     }
 }
 
+extension Row.Property.Size: Hashable {
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(self)
+    }
+}
+
+extension Row: Hashable {
+    public static func == (lhs: Row, rhs: Row) -> Bool {
+        return NSStringFromClass(lhs.cellType) == NSStringFromClass(rhs.cellType) && lhs.property.size == rhs.property.size
+    }
+    
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(self)
+    }
+}
+
 #endif

@@ -30,4 +30,30 @@ public struct Section {
     }
 }
 
+extension Section.Property: Equatable {
+    public static func == (lhs: Section.Property, rhs: Section.Property) -> Bool {
+        return lhs.inset == rhs.inset &&
+            lhs.minimumLineSpacing == rhs.minimumLineSpacing &&
+            lhs.minimumInteritemSpacing == rhs.minimumInteritemSpacing &&
+            lhs.referenceSizeForHeader == rhs.referenceSizeForHeader &&
+            lhs.referenceSizeForFooter == rhs.referenceSizeForFooter
+    }
+}
+
+extension Section: Hashable {
+    public static func == (lhs: Section, rhs: Section) -> Bool {
+        guard lhs.rows.count == rhs.rows.count else { return false }
+        for (index, lrow) in lhs.rows.enumerated() {
+            if lrow != rhs.rows[index] {
+                return false
+            }
+        }
+        return lhs.property == rhs.property
+    }
+    
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(self)
+    }
+}
+
 #endif
