@@ -25,7 +25,7 @@ Then run `pod install`.
 Make the following entry in your Cartfile:
 
 ```
-github "feixue299/FXListKit" ~>0.1.13
+github "feixue299/FXListKit" ~> 0.1.14
 ```
 
 Then run `carthage update`.
