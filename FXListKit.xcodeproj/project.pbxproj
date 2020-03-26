@@ -7,12 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F0F9F2E242544B7004F076C /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0F9F26242544B7004F076C /* Section.swift */; };
-		1F0F9F2F242544B7004F076C /* ListViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0F9F27242544B7004F076C /* ListViewManager.swift */; };
-		1F0F9F30242544B7004F076C /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0F9F28242544B7004F076C /* Row.swift */; };
-		1F0F9F31242544B7004F076C /* NSObject+FXClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F0F9F2A242544B7004F076C /* NSObject+FXClass.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1F0F9F32242544B7004F076C /* NSObject+FXClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F0F9F2B242544B7004F076C /* NSObject+FXClass.m */; };
-		1F0F9F33242544B7004F076C /* CollectionViewCellBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0F9F2D242544B7004F076C /* CollectionViewCellBox.swift */; };
 		1F30437923DC970B00003E3B /* FXListKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F30436F23DC970B00003E3B /* FXListKit.framework */; };
 		1F30438023DC970B00003E3B /* FXListKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F30437223DC970B00003E3B /* FXListKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1F3043A023DCE8FE00003E3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F30439F23DCE8FE00003E3B /* AppDelegate.swift */; };
@@ -24,6 +18,16 @@
 		1F3043D123DD09F700003E3B /* FXListKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F30436F23DC970B00003E3B /* FXListKit.framework */; };
 		1F3043D223DD09F700003E3B /* FXListKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1F30436F23DC970B00003E3B /* FXListKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1F86367623DE0F3F00F58F3B /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F86367523DE0F3F00F58F3B /* CustomViewController.swift */; };
+		1F9382A6242C7987000C05CD /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F93829E242C7987000C05CD /* Section.swift */; };
+		1F9382A7242C7987000C05CD /* ListViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F93829F242C7987000C05CD /* ListViewManager.swift */; };
+		1F9382A8242C7987000C05CD /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9382A0242C7987000C05CD /* Row.swift */; };
+		1F9382A9242C7987000C05CD /* NSObject+FXClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F9382A2242C7987000C05CD /* NSObject+FXClass.h */; };
+		1F9382AA242C7987000C05CD /* NSObject+FXClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F9382A3242C7987000C05CD /* NSObject+FXClass.m */; };
+		1F9382AB242C7987000C05CD /* CollectionViewCellBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9382A5242C7987000C05CD /* CollectionViewCellBox.swift */; };
+		1F9382B9242C8668000C05CD /* FXListKitAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F9382B7242C8668000C05CD /* FXListKitAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F9382BC242C8668000C05CD /* FXListKitAnimation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F9382B5242C8668000C05CD /* FXListKitAnimation.framework */; };
+		1F9382BD242C8668000C05CD /* FXListKitAnimation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1F9382B5242C8668000C05CD /* FXListKitAnimation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1F9382C2242C867E000C05CD /* ListViewManagerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9382C1242C867E000C05CD /* ListViewManagerExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +45,13 @@
 			remoteGlobalIDString = 1F30436E23DC970B00003E3B;
 			remoteInfo = FXListKit;
 		};
+		1F9382BA242C8668000C05CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1F30436623DC970B00003E3B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1F9382B4242C8668000C05CD;
+			remoteInfo = FXListKitAnimation;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -50,6 +61,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				1F9382BD242C8668000C05CD /* FXListKitAnimation.framework in Embed Frameworks */,
 				1F3043D223DD09F700003E3B /* FXListKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -58,12 +70,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1F0F9F26242544B7004F076C /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
-		1F0F9F27242544B7004F076C /* ListViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewManager.swift; sourceTree = "<group>"; };
-		1F0F9F28242544B7004F076C /* Row.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Row.swift; sourceTree = "<group>"; };
-		1F0F9F2A242544B7004F076C /* NSObject+FXClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+FXClass.h"; sourceTree = "<group>"; };
-		1F0F9F2B242544B7004F076C /* NSObject+FXClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FXClass.m"; sourceTree = "<group>"; };
-		1F0F9F2D242544B7004F076C /* CollectionViewCellBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCellBox.swift; sourceTree = "<group>"; };
 		1F30436F23DC970B00003E3B /* FXListKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FXListKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F30437223DC970B00003E3B /* FXListKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FXListKit.h; sourceTree = "<group>"; };
 		1F30437323DC970B00003E3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -79,6 +85,16 @@
 		1F3043AB23DCE90000003E3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F3043AD23DCE90000003E3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F86367523DE0F3F00F58F3B /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
+		1F93829E242C7987000C05CD /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		1F93829F242C7987000C05CD /* ListViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewManager.swift; sourceTree = "<group>"; };
+		1F9382A0242C7987000C05CD /* Row.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Row.swift; sourceTree = "<group>"; };
+		1F9382A2242C7987000C05CD /* NSObject+FXClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+FXClass.h"; sourceTree = "<group>"; };
+		1F9382A3242C7987000C05CD /* NSObject+FXClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FXClass.m"; sourceTree = "<group>"; };
+		1F9382A5242C7987000C05CD /* CollectionViewCellBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCellBox.swift; sourceTree = "<group>"; };
+		1F9382B5242C8668000C05CD /* FXListKitAnimation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FXListKitAnimation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F9382B7242C8668000C05CD /* FXListKitAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FXListKitAnimation.h; sourceTree = "<group>"; };
+		1F9382B8242C8668000C05CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F9382C1242C867E000C05CD /* ListViewManagerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListViewManagerExtension.swift; path = Sources/FXListKitAnimation/ListViewManagerExtension.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,64 +117,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F9382BC242C8668000C05CD /* FXListKitAnimation.framework in Frameworks */,
 				1F3043D123DD09F700003E3B /* FXListKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F9382B2242C8668000C05CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1F0F9F23242544B7004F076C /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				1F0F9F24242544B7004F076C /* FXListKit */,
-			);
-			path = Sources;
-			sourceTree = SOURCE_ROOT;
-		};
-		1F0F9F24242544B7004F076C /* FXListKit */ = {
-			isa = PBXGroup;
-			children = (
-				1F0F9F25242544B7004F076C /* Core */,
-				1F0F9F29242544B7004F076C /* internal */,
-				1F0F9F2C242544B7004F076C /* Views */,
-			);
-			path = FXListKit;
-			sourceTree = "<group>";
-		};
-		1F0F9F25242544B7004F076C /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				1F0F9F26242544B7004F076C /* Section.swift */,
-				1F0F9F27242544B7004F076C /* ListViewManager.swift */,
-				1F0F9F28242544B7004F076C /* Row.swift */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		1F0F9F29242544B7004F076C /* internal */ = {
-			isa = PBXGroup;
-			children = (
-				1F0F9F2A242544B7004F076C /* NSObject+FXClass.h */,
-				1F0F9F2B242544B7004F076C /* NSObject+FXClass.m */,
-			);
-			path = internal;
-			sourceTree = "<group>";
-		};
-		1F0F9F2C242544B7004F076C /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				1F0F9F2D242544B7004F076C /* CollectionViewCellBox.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		1F30436523DC970B00003E3B = {
 			isa = PBXGroup;
 			children = (
 				1F30437123DC970B00003E3B /* FXListKit */,
 				1F30437C23DC970B00003E3B /* FXListKitTests */,
 				1F30439E23DCE8FE00003E3B /* Demo */,
+				1F9382B6242C8668000C05CD /* FXListKitAnimation */,
 				1F30437023DC970B00003E3B /* Products */,
 				1F3043D023DD09F700003E3B /* Frameworks */,
 			);
@@ -170,6 +150,7 @@
 				1F30436F23DC970B00003E3B /* FXListKit.framework */,
 				1F30437823DC970B00003E3B /* FXListKitTests.xctest */,
 				1F30439D23DCE8FD00003E3B /* Demo.app */,
+				1F9382B5242C8668000C05CD /* FXListKitAnimation.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -177,7 +158,9 @@
 		1F30437123DC970B00003E3B /* FXListKit */ = {
 			isa = PBXGroup;
 			children = (
-				1F0F9F23242544B7004F076C /* Sources */,
+				1F93829D242C7987000C05CD /* Core */,
+				1F9382A1242C7987000C05CD /* internal */,
+				1F9382A4242C7987000C05CD /* Views */,
 				1F30437223DC970B00003E3B /* FXListKit.h */,
 				1F30437323DC970B00003E3B /* Info.plist */,
 			);
@@ -215,6 +198,46 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		1F93829D242C7987000C05CD /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				1F93829E242C7987000C05CD /* Section.swift */,
+				1F93829F242C7987000C05CD /* ListViewManager.swift */,
+				1F9382A0242C7987000C05CD /* Row.swift */,
+			);
+			name = Core;
+			path = Sources/FXListKit/Core;
+			sourceTree = SOURCE_ROOT;
+		};
+		1F9382A1242C7987000C05CD /* internal */ = {
+			isa = PBXGroup;
+			children = (
+				1F9382A2242C7987000C05CD /* NSObject+FXClass.h */,
+				1F9382A3242C7987000C05CD /* NSObject+FXClass.m */,
+			);
+			name = internal;
+			path = Sources/FXListKit/internal;
+			sourceTree = SOURCE_ROOT;
+		};
+		1F9382A4242C7987000C05CD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1F9382A5242C7987000C05CD /* CollectionViewCellBox.swift */,
+			);
+			name = Views;
+			path = Sources/FXListKit/Views;
+			sourceTree = SOURCE_ROOT;
+		};
+		1F9382B6242C8668000C05CD /* FXListKitAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				1F9382C1242C867E000C05CD /* ListViewManagerExtension.swift */,
+				1F9382B7242C8668000C05CD /* FXListKitAnimation.h */,
+				1F9382B8242C8668000C05CD /* Info.plist */,
+			);
+			path = FXListKitAnimation;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -223,7 +246,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F30438023DC970B00003E3B /* FXListKit.h in Headers */,
-				1F0F9F31242544B7004F076C /* NSObject+FXClass.h in Headers */,
+				1F9382A9242C7987000C05CD /* NSObject+FXClass.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F9382B0242C8668000C05CD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F9382B9242C8668000C05CD /* FXListKitAnimation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,11 +310,30 @@
 			);
 			dependencies = (
 				1F3043D423DD09F700003E3B /* PBXTargetDependency */,
+				1F9382BB242C8668000C05CD /* PBXTargetDependency */,
 			);
 			name = Demo;
 			productName = Demo;
 			productReference = 1F30439D23DCE8FD00003E3B /* Demo.app */;
 			productType = "com.apple.product-type.application";
+		};
+		1F9382B4242C8668000C05CD /* FXListKitAnimation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F9382BE242C8668000C05CD /* Build configuration list for PBXNativeTarget "FXListKitAnimation" */;
+			buildPhases = (
+				1F9382B0242C8668000C05CD /* Headers */,
+				1F9382B1242C8668000C05CD /* Sources */,
+				1F9382B2242C8668000C05CD /* Frameworks */,
+				1F9382B3242C8668000C05CD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FXListKitAnimation;
+			productName = FXListKitAnimation;
+			productReference = 1F9382B5242C8668000C05CD /* FXListKitAnimation.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -306,6 +356,10 @@
 					1F30439C23DCE8FD00003E3B = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
+					1F9382B4242C8668000C05CD = {
+						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
+					};
 				};
 			};
 			buildConfigurationList = 1F30436923DC970B00003E3B /* Build configuration list for PBXProject "FXListKit" */;
@@ -324,6 +378,7 @@
 				1F30436E23DC970B00003E3B /* FXListKit */,
 				1F30437723DC970B00003E3B /* FXListKitTests */,
 				1F30439C23DCE8FD00003E3B /* Demo */,
+				1F9382B4242C8668000C05CD /* FXListKitAnimation */,
 			);
 		};
 /* End PBXProject section */
@@ -353,6 +408,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1F9382B3242C8668000C05CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -360,11 +422,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F0F9F32242544B7004F076C /* NSObject+FXClass.m in Sources */,
-				1F0F9F33242544B7004F076C /* CollectionViewCellBox.swift in Sources */,
-				1F0F9F2F242544B7004F076C /* ListViewManager.swift in Sources */,
-				1F0F9F30242544B7004F076C /* Row.swift in Sources */,
-				1F0F9F2E242544B7004F076C /* Section.swift in Sources */,
+				1F9382AA242C7987000C05CD /* NSObject+FXClass.m in Sources */,
+				1F9382AB242C7987000C05CD /* CollectionViewCellBox.swift in Sources */,
+				1F9382A7242C7987000C05CD /* ListViewManager.swift in Sources */,
+				1F9382A8242C7987000C05CD /* Row.swift in Sources */,
+				1F9382A6242C7987000C05CD /* Section.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +448,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1F9382B1242C8668000C05CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F9382C2242C867E000C05CD /* ListViewManagerExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -398,6 +468,11 @@
 			isa = PBXTargetDependency;
 			target = 1F30436E23DC970B00003E3B /* FXListKit */;
 			targetProxy = 1F3043D323DD09F700003E3B /* PBXContainerItemProxy */;
+		};
+		1F9382BB242C8668000C05CD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1F9382B4242C8668000C05CD /* FXListKitAnimation */;
+			targetProxy = 1F9382BA242C8668000C05CD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -671,6 +746,55 @@
 			};
 			name = Release;
 		};
+		1F9382BF242C8668000C05CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = FXListKitAnimation/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wpf.FXListKitAnimation;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1F9382C0242C8668000C05CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = FXListKitAnimation/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wpf.FXListKitAnimation;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -706,6 +830,15 @@
 			buildConfigurations = (
 				1F3043BA23DCE90000003E3B /* Debug */,
 				1F3043BB23DCE90000003E3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F9382BE242C8668000C05CD /* Build configuration list for PBXNativeTarget "FXListKitAnimation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F9382BF242C8668000C05CD /* Debug */,
+				1F9382C0242C8668000C05CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

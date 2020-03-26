@@ -16,16 +16,15 @@ Pod::Spec.new do |spec|
   spec.source       = { :git => "https://github.com/feixue299/FXListKit.git", :tag => "#{spec.version}" }
   spec.default_subspec = "Core"
   spec.ios.deployment_target  = '9.0'
-  spec.swift_versions = ['4.0', '5.0', '5.1']
+  spec.swift_versions = ['5.0']
 
   spec.subspec "Core" do |ss|
-    ss.source_files  = "Sources/FXListKit/"
+    ss.source_files  = "Sources/FXListKit/**/*{.h, .m, .swift}"
   end
 
-  spec.subspec "FXListKitAnimation" do |ss|
-    ss.source_files = "Sources/FXListKitAnimation"
-    ss.dependency "DifferenceKit", "~>1.1.5"
-    ss.dependency "FXListKit/Core"
+  spec.subspec "Animation" do |ss|
+    ss.source_files = "Sources/FXListKit/**/*{.h, .m, .swift}"， "Sources/FXListKitAnimation/*.swift}"
+    ss.dependency "DifferenceKit", "~> 1.1.5"
   end
 
 end

@@ -6,8 +6,10 @@
 //
 
 import Foundation
-import FXListKit
 import DifferenceKit
+#if !COCOAPODS
+import FXListKit
+#endif
 
 public extension ListViewManager {
     
