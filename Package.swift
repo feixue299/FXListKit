@@ -13,8 +13,8 @@ let package = Package(
             name: "FXListKit",
             targets: ["FXListKit"]),
         .library(
-            name: "FXlistKitAnimation",
-            targets: ["FXlistKitAnimation"]),
+            name: "FXListKitAnimation",
+            targets: ["FXListKitAnimation"]),
     ],
     dependencies: [
         .package(url: "https://github.com/ra1028/DifferenceKit.git", from: "1.1.5")
@@ -29,7 +29,7 @@ let package = Package(
             dependencies: ["FXListKitInternal"],
             sources: ["Core", "Views"]),
         .target(
-            name: "FXlistKitAnimation",
+            name: "FXListKitAnimation",
             dependencies: ["FXListKit", "DifferenceKit"]),
     ]
 )
