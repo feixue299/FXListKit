@@ -52,6 +52,13 @@
 			remoteGlobalIDString = 1F9382B4242C8668000C05CD;
 			remoteInfo = FXListKitAnimation;
 		};
+		1F9382E8242CA0EA000C05CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1F30436623DC970B00003E3B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1F30436E23DC970B00003E3B;
+			remoteInfo = FXListKit;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -329,6 +336,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				1F9382E9242CA0EA000C05CD /* PBXTargetDependency */,
 			);
 			name = FXListKitAnimation;
 			productName = FXListKitAnimation;
@@ -473,6 +481,11 @@
 			isa = PBXTargetDependency;
 			target = 1F9382B4242C8668000C05CD /* FXListKitAnimation */;
 			targetProxy = 1F9382BA242C8668000C05CD /* PBXContainerItemProxy */;
+		};
+		1F9382E9242CA0EA000C05CD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1F30436E23DC970B00003E3B /* FXListKit */;
+			targetProxy = 1F9382E8242CA0EA000C05CD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
