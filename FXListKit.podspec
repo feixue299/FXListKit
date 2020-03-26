@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |spec|
   spec.name         = "FXListKit"
-  spec.version      = "0.1.10"
+  spec.version      = "0.1.11"
   spec.summary      = "A data-driven UICollectionView framework for building fast and flexible lists"
   spec.homepage     = "https://github.com/feixue299/FXListKit"
   spec.license      = { :type => "MIT", :file => "LICENSE" }
@@ -23,7 +23,7 @@ Pod::Spec.new do |spec|
   end
 
   spec.subspec "Animation" do |ss|
-    ss.source_files = "Sources/FXListKit/**/*{.h, .m, .swift}"， "Sources/FXListKitAnimation/*.swift}"
+    ss.source_files = "Sources/FXListKit/**/*{.h, .m, .swift}", "Sources/FXListKitAnimation/*.swift}"
     ss.dependency "DifferenceKit", "~> 1.1.5"
   end
 
