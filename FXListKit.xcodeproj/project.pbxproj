@@ -21,7 +21,7 @@
 		1F9382A6242C7987000C05CD /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F93829E242C7987000C05CD /* Section.swift */; };
 		1F9382A7242C7987000C05CD /* ListViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F93829F242C7987000C05CD /* ListViewManager.swift */; };
 		1F9382A8242C7987000C05CD /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9382A0242C7987000C05CD /* Row.swift */; };
-		1F9382A9242C7987000C05CD /* NSObject+FXClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F9382A2242C7987000C05CD /* NSObject+FXClass.h */; };
+		1F9382A9242C7987000C05CD /* NSObject+FXClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F9382A2242C7987000C05CD /* NSObject+FXClass.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1F9382AA242C7987000C05CD /* NSObject+FXClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F9382A3242C7987000C05CD /* NSObject+FXClass.m */; };
 		1F9382AB242C7987000C05CD /* CollectionViewCellBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9382A5242C7987000C05CD /* CollectionViewCellBox.swift */; };
 		1F9382B9242C8668000C05CD /* FXListKitAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F9382B7242C8668000C05CD /* FXListKitAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -638,6 +638,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/iOS/";
 				INFOPLIST_FILE = FXListKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -665,6 +666,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/iOS/";
 				INFOPLIST_FILE = FXListKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
