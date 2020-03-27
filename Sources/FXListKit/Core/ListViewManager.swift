@@ -17,7 +17,10 @@ import FXListKitInternal
 
 public class ListViewManager: NSObject {
     public var dataSource: [Section] {
-        return sectionGroup
+        get { return sectionGroup }
+        set {
+            sectionGroup = newValue
+        }
     }
     private var sectionGroup: [Section]
     private let sectionGroupClosure: () -> [Section]

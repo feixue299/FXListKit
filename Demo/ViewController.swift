@@ -8,6 +8,7 @@
 
 import FXListKit
 import UIKit
+import FXListKitAnimation
 
 class ViewController: UIViewController {
     struct Model {
@@ -100,6 +101,6 @@ class ViewController: UIViewController {
 
     @objc func refreshItemTap(sender: UIBarButtonItem) {
         model.random()
-        listManager.reloadData()
+        listManager.reloadWithAnimation()
     }
 }

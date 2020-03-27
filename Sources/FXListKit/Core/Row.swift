@@ -46,17 +46,25 @@ public struct Row {
 
 extension Row.Property.Size: Hashable {
     public func hash(into hasher: inout Hasher) {
-        hasher.combine(self)
+        switch self {
+        case let .single(height):
+            hasher.combine("single:\(height)")
+        case let .section(value):
+            hasher.combine("section:\(value)")
+        case let .custom(size):
+            hasher.combine("custom:\(size)")
+        }
     }
 }
 
 extension Row: Hashable {
     public static func == (lhs: Row, rhs: Row) -> Bool {
-        return NSStringFromClass(lhs.cellType) == NSStringFromClass(rhs.cellType) && lhs.property.size == rhs.property.size
+        return lhs.hashValue == rhs.hashValue
     }
     
     public func hash(into hasher: inout Hasher) {
-        hasher.combine(self)
+        hasher.combine(NSStringFromClass(cellType))
+        hasher.combine(property.size)
     }
 }
 

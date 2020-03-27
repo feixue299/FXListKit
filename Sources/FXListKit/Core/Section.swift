@@ -30,29 +30,35 @@ public struct Section {
     }
 }
 
-extension Section.Property: Equatable {
+extension Section.Property: Hashable {
     public static func == (lhs: Section.Property, rhs: Section.Property) -> Bool {
-        return lhs.inset == rhs.inset &&
-            lhs.minimumLineSpacing == rhs.minimumLineSpacing &&
-            lhs.minimumInteritemSpacing == rhs.minimumInteritemSpacing &&
-            lhs.referenceSizeForHeader == rhs.referenceSizeForHeader &&
-            lhs.referenceSizeForFooter == rhs.referenceSizeForFooter
+        return lhs.hashValue == rhs.hashValue
+    }
+    
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(inset.top)
+        hasher.combine(inset.bottom)
+        hasher.combine(inset.left)
+        hasher.combine(inset.right)
+        hasher.combine(minimumLineSpacing)
+        hasher.combine(minimumInteritemSpacing)
+        hasher.combine(referenceSizeForHeader.height)
+        hasher.combine(referenceSizeForHeader.width)
+        hasher.combine(referenceSizeForFooter.height)
+        hasher.combine(referenceSizeForFooter.width)
     }
 }
 
 extension Section: Hashable {
     public static func == (lhs: Section, rhs: Section) -> Bool {
-        guard lhs.rows.count == rhs.rows.count else { return false }
-        for (index, lrow) in lhs.rows.enumerated() {
-            if lrow != rhs.rows[index] {
-                return false
-            }
-        }
-        return lhs.property == rhs.property
+        return lhs.hashValue == rhs.hashValue
     }
     
     public func hash(into hasher: inout Hasher) {
-        hasher.combine(self)
+        for row in rows {
+            hasher.combine(row)
+        }
+        hasher.combine(property)
     }
 }
 
