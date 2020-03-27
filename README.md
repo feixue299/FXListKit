@@ -25,7 +25,7 @@ Then run `pod install`.
 Make the following entry in your Cartfile:
 
 ```
-github "feixue299/FXListKit" ~> 0.1.15
+github "feixue299/FXListKit" ~> 0.1.16
 ```
 
 Then run `carthage update`.
@@ -37,7 +37,7 @@ Create a `Package.swift` file.
 ```swift
 let package = Package(
     dependencies: [
-        .package(url: "https://github.com/feixue299/FXListKit.git", from: "0.1.15")
+        .package(url: "https://github.com/feixue299/FXListKit.git", from: "0.1.16")
     ],
     // ...
 )
