@@ -2,7 +2,7 @@
 
 ## Features
 - [ ] adapter UICollectionViewLayout
-- [ ] Update with animation
+- [x] Update with animation
 
 ## Requirements
 - iOS 9.0+
