@@ -6,10 +6,12 @@
 //
 
 import Foundation
-import DifferenceKit
 #if canImport(FXListKit)
 import FXListKit
 #endif
+
+#if canImport(DifferenceKit)
+import DifferenceKit
 
 public extension ListViewManager {
     
@@ -26,5 +28,5 @@ public extension ListViewManager {
 
 extension Section: Differentiable { }
 extension Row: Differentiable { }
-
+#endif
 

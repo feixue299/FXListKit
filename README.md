@@ -14,7 +14,7 @@
 For FXListKit, use the following entry in your Podfile:
 
 ```rb
-pod 'FXListKit', '~> 0.1.15'
+pod 'FXListKit', '~> 0.1.16'
 ```
 
 Then run `pod install`.
