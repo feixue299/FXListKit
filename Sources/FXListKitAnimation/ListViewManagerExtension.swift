@@ -15,16 +15,18 @@ import FXListKit
 import DifferenceKit
 #endif
 
-private let rowKey = "rowKey"
+private struct AssociatedKeys {
+    static var rowKey = "rowKey"
+}
 
 public extension Row {
     
-    var key: Int? {
-        set { objc_setAssociatedObject(self, rowKey, newValue, .OBJC_ASSOCIATION_ASSIGN) }
-        get { objc_getAssociatedObject(self, rowKey) as? Int }
+    fileprivate var key: Int? {
+        set { objc_setAssociatedObject(self, &AssociatedKeys.rowKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC) }
+        get { objc_getAssociatedObject(self, &AssociatedKeys.rowKey) as? Int }
     }
     
-    init<View: UIView, Key: Hashable>(cellType: View.Type,
+    convenience init<View: UIView, Key: Hashable>(cellType: View.Type,
                        key: Key,
                        cellConfig: ((_ view: View) -> Void)? = nil,
                        configPropertyClosure: ((_ property: Property) -> Void)? = nil,

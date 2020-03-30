@@ -7,8 +7,8 @@
 //
 
 import FXListKit
-import UIKit
 import FXListKitAnimation
+import UIKit
 
 class ViewController: UIViewController {
     struct Model {
@@ -42,40 +42,50 @@ class ViewController: UIViewController {
             property.minimumLineSpacing = 1
             property.inset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
             return strongSelf.model.textGroup.map { text in
-                Row(cellType: CollectionViewCellBox<UILabel>.self, cellConfig: { (view) in
-                    view.backgroundColor = UIColor.white
-                    view.customView.textAlignment = .center
-                    view.customView.text = text
-                }, configPropertyClosure: { (property) in
-                    property.size = .section(value: 4)
-                }, didSelect: {
-                    let vc = CustomViewController<UILabel>()
-                    vc.customView.textAlignment = .center
-                    vc.customView.text = text
-                    self?.navigationController?.pushViewController(vc, animated: true)
+                Row(cellType: CollectionViewCellBox<UILabel>.self,
+                    key: text,
+                    cellConfig: { view in
+                        view.backgroundColor = UIColor.white
+                        view.customView.textAlignment = .center
+                        view.customView.text = text
+                    },
+                    configPropertyClosure: { property in
+                        property.size = .section(value: 4)
+                    },
+                    didSelect: {
+                        let vc = CustomViewController<UILabel>()
+                        vc.customView.textAlignment = .center
+                        vc.customView.text = text
+                        self?.navigationController?.pushViewController(vc, animated: true)
                 })
             }
         }, Section { _ in
-            [Row(cellType: CollectionViewCellBox<UILabel>.self, cellConfig: { view in
-                view.backgroundColor = .white
-                view.customView.textAlignment = .left
-                view.customView.text = "single line"
-                }, configPropertyClosure: { property in
-                    property.size = .single(height: 44)
-                }, didSelect: {
-                    let vc = CustomViewController<UILabel>()
-                    vc.customView.textAlignment = .center
-                    vc.customView.text = "single line"
-                    self?.navigationController?.pushViewController(vc, animated: true)
+            [Row(cellType: CollectionViewCellBox<UILabel>.self,
+                 cellConfig: { view in
+                     view.backgroundColor = .white
+                     view.customView.textAlignment = .left
+                     view.customView.text = "single line"
+                 },
+                 configPropertyClosure: { property in
+                     property.size = .single(height: 44)
+                 },
+                 didSelect: {
+                     let vc = CustomViewController<UILabel>()
+                     vc.customView.textAlignment = .center
+                     vc.customView.text = "single line"
+                     self?.navigationController?.pushViewController(vc, animated: true)
             })]
         }, Section { _ in
             strongSelf.model.imageGroup.map { image in
                 Row(cellType: CollectionViewCellBox<UIImageView>.self,
+                    key: image,
                     cellConfig: { view in
                         view.customView.image = image
-                    }, configPropertyClosure: { property in
+                    },
+                    configPropertyClosure: { property in
                         property.size = .custom(size: image.size)
-                    }, didSelect: {
+                    },
+                    didSelect: {
                         let vc = CustomViewController<UIImageView>()
                         vc.customView.contentMode = .scaleAspectFit
                         vc.customView.image = image

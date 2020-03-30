@@ -11,7 +11,7 @@
 import Foundation
 import UIKit
 
-public struct Row {
+public class Row {
     public class Property {
         public enum Size {
             case section(value: Int)
