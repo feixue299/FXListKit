@@ -61,7 +61,7 @@ extension Row: Hashable {
     public static func == (lhs: Row, rhs: Row) -> Bool {
         return lhs.hashValue == rhs.hashValue
     }
-    
+
     public func hash(into hasher: inout Hasher) {
         hasher.combine(NSStringFromClass(cellType))
         hasher.combine(property.size)
