@@ -28,14 +28,14 @@
 		1F938301242DAE5E000C05CD /* SectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F938300242DAE5E000C05CD /* SectionTests.swift */; };
 		5231751BF8D12F1BBF95538C /* Pods_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B99F3BDCA8F396595F054F99 /* Pods_Demo.framework */; };
 		7A9CDC4A2E751CFFDF3DEC0B /* Pods_FXListKitAnimation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 438102A32CD7A89CA4559669 /* Pods_FXListKitAnimation.framework */; };
-		C34F0DDA248653C40026F0EE /* ListViewManagerBridgeOC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34F0DD9248653C40026F0EE /* ListViewManagerBridgeOC.swift */; };
-		C34F0DDC248656630026F0EE /* SectionBridgeOC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34F0DDB248656630026F0EE /* SectionBridgeOC.swift */; };
-		C34F0DDE2486568E0026F0EE /* RowBridgeOC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34F0DDD2486568E0026F0EE /* RowBridgeOC.swift */; };
 		C34F0DFC2486631C0026F0EE /* FXListKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F30436F23DC970B00003E3B /* FXListKit.framework */; };
 		C34F0DFD2486631C0026F0EE /* FXListKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1F30436F23DC970B00003E3B /* FXListKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C34F0E002486631C0026F0EE /* FXListKitAnimation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F9382B5242C8668000C05CD /* FXListKitAnimation.framework */; };
 		C34F0E012486631C0026F0EE /* FXListKitAnimation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1F9382B5242C8668000C05CD /* FXListKitAnimation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C34F0E08248663C90026F0EE /* OCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C34F0E07248663C90026F0EE /* OCViewController.m */; };
+		C34F0E0D248669210026F0EE /* SectionBridgeOC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34F0E0A248669210026F0EE /* SectionBridgeOC.swift */; };
+		C34F0E0E248669210026F0EE /* ListViewManagerBridgeOC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34F0E0B248669210026F0EE /* ListViewManagerBridgeOC.swift */; };
+		C34F0E0F248669210026F0EE /* RowBridgeOC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34F0E0C248669210026F0EE /* RowBridgeOC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,12 +121,12 @@
 		91BAB849C4585BA2AD0DB6F6 /* Pods-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.debug.xcconfig"; path = "Target Support Files/Pods-Demo/Pods-Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		B99F3BDCA8F396595F054F99 /* Pods_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1E5C8CC86A26940CA5C4439 /* Pods-DemoOC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoOC.release.xcconfig"; path = "Target Support Files/Pods-DemoOC/Pods-DemoOC.release.xcconfig"; sourceTree = "<group>"; };
-		C34F0DD9248653C40026F0EE /* ListViewManagerBridgeOC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewManagerBridgeOC.swift; sourceTree = "<group>"; };
-		C34F0DDB248656630026F0EE /* SectionBridgeOC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionBridgeOC.swift; sourceTree = "<group>"; };
-		C34F0DDD2486568E0026F0EE /* RowBridgeOC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowBridgeOC.swift; sourceTree = "<group>"; };
 		C34F0E05248663C80026F0EE /* Demo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Demo-Bridging-Header.h"; sourceTree = "<group>"; };
 		C34F0E06248663C90026F0EE /* OCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCViewController.h; sourceTree = "<group>"; };
 		C34F0E07248663C90026F0EE /* OCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCViewController.m; sourceTree = "<group>"; };
+		C34F0E0A248669210026F0EE /* SectionBridgeOC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionBridgeOC.swift; sourceTree = "<group>"; };
+		C34F0E0B248669210026F0EE /* ListViewManagerBridgeOC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewManagerBridgeOC.swift; sourceTree = "<group>"; };
+		C34F0E0C248669210026F0EE /* RowBridgeOC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RowBridgeOC.swift; sourceTree = "<group>"; };
 		EE17D525CF89270B4F1645BF /* Pods-FXListKitAnimation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FXListKitAnimation.debug.xcconfig"; path = "Target Support Files/Pods-FXListKitAnimation/Pods-FXListKitAnimation.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -194,7 +194,7 @@
 		1F30437123DC970B00003E3B /* FXListKit */ = {
 			isa = PBXGroup;
 			children = (
-				C34F0DD82486532F0026F0EE /* Bridge */,
+				C34F0E09248669210026F0EE /* Bridge */,
 				1F93829D242C7987000C05CD /* Core */,
 				1F9382A1242C7987000C05CD /* internal */,
 				1F9382A4242C7987000C05CD /* Views */,
@@ -297,15 +297,16 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		C34F0DD82486532F0026F0EE /* Bridge */ = {
+		C34F0E09248669210026F0EE /* Bridge */ = {
 			isa = PBXGroup;
 			children = (
-				C34F0DD9248653C40026F0EE /* ListViewManagerBridgeOC.swift */,
-				C34F0DDB248656630026F0EE /* SectionBridgeOC.swift */,
-				C34F0DDD2486568E0026F0EE /* RowBridgeOC.swift */,
+				C34F0E0A248669210026F0EE /* SectionBridgeOC.swift */,
+				C34F0E0B248669210026F0EE /* ListViewManagerBridgeOC.swift */,
+				C34F0E0C248669210026F0EE /* RowBridgeOC.swift */,
 			);
-			path = Bridge;
-			sourceTree = "<group>";
+			name = Bridge;
+			path = Sources/FXListKit/Bridge;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -560,12 +561,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C34F0E0E248669210026F0EE /* ListViewManagerBridgeOC.swift in Sources */,
+				C34F0E0D248669210026F0EE /* SectionBridgeOC.swift in Sources */,
 				1F9382AA242C7987000C05CD /* NSObject+FXClass.m in Sources */,
+				C34F0E0F248669210026F0EE /* RowBridgeOC.swift in Sources */,
 				1F9382AB242C7987000C05CD /* CollectionViewCellBox.swift in Sources */,
 				1F9382A7242C7987000C05CD /* ListViewManager.swift in Sources */,
-				C34F0DDE2486568E0026F0EE /* RowBridgeOC.swift in Sources */,
-				C34F0DDA248653C40026F0EE /* ListViewManagerBridgeOC.swift in Sources */,
-				C34F0DDC248656630026F0EE /* SectionBridgeOC.swift in Sources */,
 				1F9382A8242C7987000C05CD /* Row.swift in Sources */,
 				1F9382A6242C7987000C05CD /* Section.swift in Sources */,
 			);

@@ -27,7 +27,7 @@ let package = Package(
         .target(
             name: "FXListKit",
             dependencies: ["FXListKitInternal"],
-            sources: ["Core", "Views"]),
+            sources: ["Core", "Views", "Bridge"]),
         .target(
             name: "FXListKitAnimation",
             dependencies: ["FXListKit", "DifferenceKit"]),
