@@ -33,7 +33,7 @@ public class ListViewManager: NSObject {
         super.init()
     }
     
-    public func configCollectionView(_ view: UICollectionView) {
+    @objc public func configCollectionView(_ view: UICollectionView) {
         view.delegate = self
         view.dataSource = self
         collectionView = view

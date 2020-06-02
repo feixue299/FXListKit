@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,8 +15,6 @@
 		1F3043A723DCE8FE00003E3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F3043A523DCE8FE00003E3B /* Main.storyboard */; };
 		1F3043A923DCE90000003E3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F3043A823DCE90000003E3B /* Assets.xcassets */; };
 		1F3043AC23DCE90000003E3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F3043AA23DCE90000003E3B /* LaunchScreen.storyboard */; };
-		1F3043D123DD09F700003E3B /* FXListKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F30436F23DC970B00003E3B /* FXListKit.framework */; };
-		1F3043D223DD09F700003E3B /* FXListKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1F30436F23DC970B00003E3B /* FXListKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1F86367623DE0F3F00F58F3B /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F86367523DE0F3F00F58F3B /* CustomViewController.swift */; };
 		1F9382A6242C7987000C05CD /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F93829E242C7987000C05CD /* Section.swift */; };
 		1F9382A7242C7987000C05CD /* ListViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F93829F242C7987000C05CD /* ListViewManager.swift */; };
@@ -25,13 +23,19 @@
 		1F9382AA242C7987000C05CD /* NSObject+FXClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F9382A3242C7987000C05CD /* NSObject+FXClass.m */; };
 		1F9382AB242C7987000C05CD /* CollectionViewCellBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9382A5242C7987000C05CD /* CollectionViewCellBox.swift */; };
 		1F9382B9242C8668000C05CD /* FXListKitAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F9382B7242C8668000C05CD /* FXListKitAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1F9382BC242C8668000C05CD /* FXListKitAnimation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F9382B5242C8668000C05CD /* FXListKitAnimation.framework */; };
-		1F9382BD242C8668000C05CD /* FXListKitAnimation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1F9382B5242C8668000C05CD /* FXListKitAnimation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1F9382C2242C867E000C05CD /* ListViewManagerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9382C1242C867E000C05CD /* ListViewManagerExtension.swift */; };
 		1F9382FF242DA670000C05CD /* RowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9382FE242DA670000C05CD /* RowTests.swift */; };
 		1F938301242DAE5E000C05CD /* SectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F938300242DAE5E000C05CD /* SectionTests.swift */; };
-		1F938303242DD289000C05CD /* DifferenceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F9382F9242CB050000C05CD /* DifferenceKit.framework */; };
-		1F938304242DD289000C05CD /* DifferenceKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1F9382F9242CB050000C05CD /* DifferenceKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5231751BF8D12F1BBF95538C /* Pods_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B99F3BDCA8F396595F054F99 /* Pods_Demo.framework */; };
+		7A9CDC4A2E751CFFDF3DEC0B /* Pods_FXListKitAnimation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 438102A32CD7A89CA4559669 /* Pods_FXListKitAnimation.framework */; };
+		C34F0DDA248653C40026F0EE /* ListViewManagerBridgeOC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34F0DD9248653C40026F0EE /* ListViewManagerBridgeOC.swift */; };
+		C34F0DDC248656630026F0EE /* SectionBridgeOC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34F0DDB248656630026F0EE /* SectionBridgeOC.swift */; };
+		C34F0DDE2486568E0026F0EE /* RowBridgeOC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34F0DDD2486568E0026F0EE /* RowBridgeOC.swift */; };
+		C34F0DFC2486631C0026F0EE /* FXListKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F30436F23DC970B00003E3B /* FXListKit.framework */; };
+		C34F0DFD2486631C0026F0EE /* FXListKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1F30436F23DC970B00003E3B /* FXListKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C34F0E002486631C0026F0EE /* FXListKitAnimation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F9382B5242C8668000C05CD /* FXListKitAnimation.framework */; };
+		C34F0E012486631C0026F0EE /* FXListKitAnimation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1F9382B5242C8668000C05CD /* FXListKitAnimation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C34F0E08248663C90026F0EE /* OCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C34F0E07248663C90026F0EE /* OCViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,20 +46,6 @@
 			remoteGlobalIDString = 1F30436E23DC970B00003E3B;
 			remoteInfo = FXListKit;
 		};
-		1F3043D323DD09F700003E3B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1F30436623DC970B00003E3B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1F30436E23DC970B00003E3B;
-			remoteInfo = FXListKit;
-		};
-		1F9382BA242C8668000C05CD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1F30436623DC970B00003E3B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1F9382B4242C8668000C05CD;
-			remoteInfo = FXListKitAnimation;
-		};
 		1F9382E8242CA0EA000C05CD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1F30436623DC970B00003E3B /* Project object */;
@@ -63,18 +53,31 @@
 			remoteGlobalIDString = 1F30436E23DC970B00003E3B;
 			remoteInfo = FXListKit;
 		};
+		C34F0DFE2486631C0026F0EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1F30436623DC970B00003E3B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1F30436E23DC970B00003E3B;
+			remoteInfo = FXListKit;
+		};
+		C34F0E022486631C0026F0EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1F30436623DC970B00003E3B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1F9382B4242C8668000C05CD;
+			remoteInfo = FXListKitAnimation;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		1F3043D523DD09F700003E3B /* Embed Frameworks */ = {
+		C34F0E042486631C0026F0EE /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				1F9382BD242C8668000C05CD /* FXListKitAnimation.framework in Embed Frameworks */,
-				1F3043D223DD09F700003E3B /* FXListKit.framework in Embed Frameworks */,
-				1F938304242DD289000C05CD /* DifferenceKit.framework in Embed Frameworks */,
+				C34F0E012486631C0026F0EE /* FXListKitAnimation.framework in Embed Frameworks */,
+				C34F0DFD2486631C0026F0EE /* FXListKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -110,7 +113,21 @@
 		1F9382F9242CB050000C05CD /* DifferenceKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DifferenceKit.framework; path = Carthage/Build/iOS/DifferenceKit.framework; sourceTree = "<group>"; };
 		1F9382FE242DA670000C05CD /* RowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowTests.swift; sourceTree = "<group>"; };
 		1F938300242DAE5E000C05CD /* SectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTests.swift; sourceTree = "<group>"; };
+		438102A32CD7A89CA4559669 /* Pods_FXListKitAnimation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FXListKitAnimation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		566CA86B7BED8E0B992D0485 /* Pods_DemoOC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoOC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		81EDD80BC9B6B2561FED2E03 /* Pods-FXListKitAnimation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FXListKitAnimation.release.xcconfig"; path = "Target Support Files/Pods-FXListKitAnimation/Pods-FXListKitAnimation.release.xcconfig"; sourceTree = "<group>"; };
+		84D32AC67953991DF398F935 /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.release.xcconfig"; path = "Target Support Files/Pods-Demo/Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
+		86ACF6396BDA1D53276729FF /* Pods-DemoOC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoOC.debug.xcconfig"; path = "Target Support Files/Pods-DemoOC/Pods-DemoOC.debug.xcconfig"; sourceTree = "<group>"; };
+		91BAB849C4585BA2AD0DB6F6 /* Pods-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.debug.xcconfig"; path = "Target Support Files/Pods-Demo/Pods-Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		B99F3BDCA8F396595F054F99 /* Pods_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1E5C8CC86A26940CA5C4439 /* Pods-DemoOC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoOC.release.xcconfig"; path = "Target Support Files/Pods-DemoOC/Pods-DemoOC.release.xcconfig"; sourceTree = "<group>"; };
+		C34F0DD9248653C40026F0EE /* ListViewManagerBridgeOC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewManagerBridgeOC.swift; sourceTree = "<group>"; };
+		C34F0DDB248656630026F0EE /* SectionBridgeOC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionBridgeOC.swift; sourceTree = "<group>"; };
+		C34F0DDD2486568E0026F0EE /* RowBridgeOC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowBridgeOC.swift; sourceTree = "<group>"; };
+		C34F0E05248663C80026F0EE /* Demo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Demo-Bridging-Header.h"; sourceTree = "<group>"; };
+		C34F0E06248663C90026F0EE /* OCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCViewController.h; sourceTree = "<group>"; };
+		C34F0E07248663C90026F0EE /* OCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCViewController.m; sourceTree = "<group>"; };
+		EE17D525CF89270B4F1645BF /* Pods-FXListKitAnimation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FXListKitAnimation.debug.xcconfig"; path = "Target Support Files/Pods-FXListKitAnimation/Pods-FXListKitAnimation.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,9 +150,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F9382BC242C8668000C05CD /* FXListKitAnimation.framework in Frameworks */,
-				1F3043D123DD09F700003E3B /* FXListKit.framework in Frameworks */,
-				1F938303242DD289000C05CD /* DifferenceKit.framework in Frameworks */,
+				5231751BF8D12F1BBF95538C /* Pods_Demo.framework in Frameworks */,
+				C34F0E002486631C0026F0EE /* FXListKitAnimation.framework in Frameworks */,
+				C34F0DFC2486631C0026F0EE /* FXListKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +160,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A9CDC4A2E751CFFDF3DEC0B /* Pods_FXListKitAnimation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,6 +176,7 @@
 				1F9382B6242C8668000C05CD /* FXListKitAnimation */,
 				1F30437023DC970B00003E3B /* Products */,
 				1F3043D023DD09F700003E3B /* Frameworks */,
+				96D027FF89A26E043863003D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -175,6 +194,7 @@
 		1F30437123DC970B00003E3B /* FXListKit */ = {
 			isa = PBXGroup;
 			children = (
+				C34F0DD82486532F0026F0EE /* Bridge */,
 				1F93829D242C7987000C05CD /* Core */,
 				1F9382A1242C7987000C05CD /* internal */,
 				1F9382A4242C7987000C05CD /* Views */,
@@ -201,11 +221,14 @@
 				1F30439F23DCE8FE00003E3B /* AppDelegate.swift */,
 				1F3043A123DCE8FE00003E3B /* SceneDelegate.swift */,
 				1F3043A323DCE8FE00003E3B /* ViewController.swift */,
+				C34F0E06248663C90026F0EE /* OCViewController.h */,
+				C34F0E07248663C90026F0EE /* OCViewController.m */,
 				1F86367523DE0F3F00F58F3B /* CustomViewController.swift */,
 				1F3043A523DCE8FE00003E3B /* Main.storyboard */,
 				1F3043A823DCE90000003E3B /* Assets.xcassets */,
 				1F3043AA23DCE90000003E3B /* LaunchScreen.storyboard */,
 				1F3043AD23DCE90000003E3B /* Info.plist */,
+				C34F0E05248663C80026F0EE /* Demo-Bridging-Header.h */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -215,6 +238,8 @@
 			children = (
 				1F9382F9242CB050000C05CD /* DifferenceKit.framework */,
 				B99F3BDCA8F396595F054F99 /* Pods_Demo.framework */,
+				438102A32CD7A89CA4559669 /* Pods_FXListKitAnimation.framework */,
+				566CA86B7BED8E0B992D0485 /* Pods_DemoOC.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -257,6 +282,29 @@
 				1F9382B8242C8668000C05CD /* Info.plist */,
 			);
 			path = FXListKitAnimation;
+			sourceTree = "<group>";
+		};
+		96D027FF89A26E043863003D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				91BAB849C4585BA2AD0DB6F6 /* Pods-Demo.debug.xcconfig */,
+				84D32AC67953991DF398F935 /* Pods-Demo.release.xcconfig */,
+				EE17D525CF89270B4F1645BF /* Pods-FXListKitAnimation.debug.xcconfig */,
+				81EDD80BC9B6B2561FED2E03 /* Pods-FXListKitAnimation.release.xcconfig */,
+				86ACF6396BDA1D53276729FF /* Pods-DemoOC.debug.xcconfig */,
+				C1E5C8CC86A26940CA5C4439 /* Pods-DemoOC.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C34F0DD82486532F0026F0EE /* Bridge */ = {
+			isa = PBXGroup;
+			children = (
+				C34F0DD9248653C40026F0EE /* ListViewManagerBridgeOC.swift */,
+				C34F0DDB248656630026F0EE /* SectionBridgeOC.swift */,
+				C34F0DDD2486568E0026F0EE /* RowBridgeOC.swift */,
+			);
+			path = Bridge;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,16 +370,18 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F3043B923DCE90000003E3B /* Build configuration list for PBXNativeTarget "Demo" */;
 			buildPhases = (
+				AECF48ECE07FE2EA448D7E87 /* [CP] Check Pods Manifest.lock */,
 				1F30439923DCE8FD00003E3B /* Sources */,
 				1F30439A23DCE8FD00003E3B /* Frameworks */,
 				1F30439B23DCE8FD00003E3B /* Resources */,
-				1F3043D523DD09F700003E3B /* Embed Frameworks */,
+				0C909008B874462100B15292 /* [CP] Embed Pods Frameworks */,
+				C34F0E042486631C0026F0EE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				1F3043D423DD09F700003E3B /* PBXTargetDependency */,
-				1F9382BB242C8668000C05CD /* PBXTargetDependency */,
+				C34F0DFF2486631C0026F0EE /* PBXTargetDependency */,
+				C34F0E032486631C0026F0EE /* PBXTargetDependency */,
 			);
 			name = Demo;
 			productName = Demo;
@@ -342,6 +392,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F9382BE242C8668000C05CD /* Build configuration list for PBXNativeTarget "FXListKitAnimation" */;
 			buildPhases = (
+				ACE8B52EA75391A9D6C16C71 /* [CP] Check Pods Manifest.lock */,
 				1F9382B0242C8668000C05CD /* Headers */,
 				1F9382B1242C8668000C05CD /* Sources */,
 				1F9382B2242C8668000C05CD /* Frameworks */,
@@ -377,6 +428,7 @@
 					};
 					1F30439C23DCE8FD00003E3B = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1150;
 					};
 					1F9382B4242C8668000C05CD = {
 						CreatedOnToolsVersion = 11.3.1;
@@ -439,6 +491,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0C909008B874462100B15292 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Demo/Pods-Demo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Demo/Pods-Demo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Demo/Pods-Demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ACE8B52EA75391A9D6C16C71 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FXListKitAnimation-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AECF48ECE07FE2EA448D7E87 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Demo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1F30436B23DC970B00003E3B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -447,6 +563,9 @@
 				1F9382AA242C7987000C05CD /* NSObject+FXClass.m in Sources */,
 				1F9382AB242C7987000C05CD /* CollectionViewCellBox.swift in Sources */,
 				1F9382A7242C7987000C05CD /* ListViewManager.swift in Sources */,
+				C34F0DDE2486568E0026F0EE /* RowBridgeOC.swift in Sources */,
+				C34F0DDA248653C40026F0EE /* ListViewManagerBridgeOC.swift in Sources */,
+				C34F0DDC248656630026F0EE /* SectionBridgeOC.swift in Sources */,
 				1F9382A8242C7987000C05CD /* Row.swift in Sources */,
 				1F9382A6242C7987000C05CD /* Section.swift in Sources */,
 			);
@@ -466,6 +585,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F3043A423DCE8FE00003E3B /* ViewController.swift in Sources */,
+				C34F0E08248663C90026F0EE /* OCViewController.m in Sources */,
 				1F3043A023DCE8FE00003E3B /* AppDelegate.swift in Sources */,
 				1F3043A223DCE8FE00003E3B /* SceneDelegate.swift in Sources */,
 				1F86367623DE0F3F00F58F3B /* CustomViewController.swift in Sources */,
@@ -488,20 +608,20 @@
 			target = 1F30436E23DC970B00003E3B /* FXListKit */;
 			targetProxy = 1F30437A23DC970B00003E3B /* PBXContainerItemProxy */;
 		};
-		1F3043D423DD09F700003E3B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1F30436E23DC970B00003E3B /* FXListKit */;
-			targetProxy = 1F3043D323DD09F700003E3B /* PBXContainerItemProxy */;
-		};
-		1F9382BB242C8668000C05CD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1F9382B4242C8668000C05CD /* FXListKitAnimation */;
-			targetProxy = 1F9382BA242C8668000C05CD /* PBXContainerItemProxy */;
-		};
 		1F9382E9242CA0EA000C05CD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 1F30436E23DC970B00003E3B /* FXListKit */;
 			targetProxy = 1F9382E8242CA0EA000C05CD /* PBXContainerItemProxy */;
+		};
+		C34F0DFF2486631C0026F0EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1F30436E23DC970B00003E3B /* FXListKit */;
+			targetProxy = C34F0DFE2486631C0026F0EE /* PBXContainerItemProxy */;
+		};
+		C34F0E032486631C0026F0EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1F9382B4242C8668000C05CD /* FXListKitAnimation */;
+			targetProxy = C34F0E022486631C0026F0EE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -743,9 +863,10 @@
 		};
 		1F3043BA23DCE90000003E3B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91BAB849C4585BA2AD0DB6F6 /* Pods-Demo.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -760,6 +881,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wpf.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Demo/Demo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -767,9 +890,10 @@
 		};
 		1F3043BB23DCE90000003E3B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84D32AC67953991DF398F935 /* Pods-Demo.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -784,6 +908,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wpf.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Demo/Demo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -791,6 +916,7 @@
 		};
 		1F9382BF242C8668000C05CD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE17D525CF89270B4F1645BF /* Pods-FXListKitAnimation.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -822,6 +948,7 @@
 		};
 		1F9382C0242C8668000C05CD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81EDD80BC9B6B2561FED2E03 /* Pods-FXListKitAnimation.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;

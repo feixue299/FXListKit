@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-#if !COCOAPODS
+#if canImport(FXListKit)
 import FXListKit
 #endif
 
