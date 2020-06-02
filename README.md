@@ -3,7 +3,7 @@
 ## Features
 - [ ] adapter UICollectionViewLayout
 - [x] Update with animation
-- [ ] Support objc
+- [x] Support objc
 
 ## Requirements
 - iOS 9.0+
@@ -15,7 +15,7 @@
 For FXListKit, use the following entry in your Podfile:
 
 ```rb
-pod 'FXListKit', '~> 0.1.17'
+pod 'FXListKit', '~> 0.1.18'
 ```
 
 Then run `pod install`.
@@ -26,7 +26,7 @@ Then run `pod install`.
 Make the following entry in your Cartfile:
 
 ```
-github "feixue299/FXListKit" ~> 0.1.17
+github "feixue299/FXListKit" ~> 0.1.18
 ```
 
 Then run `carthage update`.
@@ -38,7 +38,7 @@ Create a `Package.swift` file.
 ```swift
 let package = Package(
     dependencies: [
-        .package(url: "https://github.com/feixue299/FXListKit.git", from: "0.1.17")
+        .package(url: "https://github.com/feixue299/FXListKit.git", from: "0.1.18")
     ],
     // ...
 )
