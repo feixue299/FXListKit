@@ -21,7 +21,6 @@ let package = Package(
     ],
     targets: [
         .target(name: "FXListKitInternal",
-                dependencies: [],
                 path: "Sources/FXListKit/internal",
                 publicHeadersPath: "."),
         .target(
