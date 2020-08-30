@@ -4,6 +4,7 @@
 - [ ] adapter UICollectionViewLayout
 - [x] Update with animation
 - [x] Support objc
+- [ ] Row Automatic height calculation
 
 ## Requirements
 - iOS 9.0+
