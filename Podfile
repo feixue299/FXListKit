@@ -11,10 +11,6 @@ target 'Demo' do
   dependency
 end
 
-target 'DemoOC' do
-  dependency
-end
-
 target 'FXListKitAnimation' do
   dependency
 end
