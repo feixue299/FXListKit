@@ -23,7 +23,7 @@
     [super viewDidLoad];
     SectionProperty *property = [[SectionProperty alloc] initWithInset:UIEdgeInsetsZero minimumLineSpacing:10 minimumInteritemSpacing:0 referenceSizeForHeader:CGSizeZero referenceSizeForFooter:CGSizeZero];
     RowProperty *rowProperty = [[RowProperty alloc] initWithSingle:50];
-    RowBridgeOC *row = [[RowBridgeOC alloc] initWithCellType:UICollectionViewCell.class cellConfig:^(UIView * _Nonnull view) {
+    RowBridgeOC *row = [[RowBridgeOC alloc] initWithCellType:UICollectionViewCell.class cellConfig:^(UICollectionView * _Nonnull collectionView, UIView * _Nonnull view, NSIndexPath * _Nonnull indexPath) {
         view.backgroundColor = [UIColor purpleColor];
     } property:rowProperty didSelect:^{
         NSLog(@"didselect");

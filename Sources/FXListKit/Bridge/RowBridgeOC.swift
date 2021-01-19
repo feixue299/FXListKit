@@ -37,7 +37,7 @@ public class RowBridgeOC: NSObject {
     }
 
     @objc public init(cellType: AnyClass,
-                      cellConfig: ((_ view: UIView) -> Void)? = nil,
+                      cellConfig: ((_ collection: UICollectionView, _ view: UIView, _ indexPath: IndexPath) -> Void)? = nil,
                       property: RowProperty,
                       didSelect: (() -> Void)? = nil) {
         guard let type = cellType as? UIView.Type else {

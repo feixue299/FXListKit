@@ -22,19 +22,22 @@ public class Row {
         public var size: Size = .custom(size: CGSize(width: 60, height: 60))
     }
 
+    public typealias Closure<View> = (_ collectionView: UICollectionView, _ view: View, _ indexPath: IndexPath) -> Void
+    
     public let cellType: AnyClass
-    public let configClosure: ((_ view: UIView) -> Void)?
+    public let configClosure: Closure<UIView>?
     public let property = Property()
     public let didSelect: (() -> Void)?
 
     public init<View: UIView>(cellType: View.Type,
-                              cellConfig: ((_ view: View) -> Void)? = nil,
+                              cellConfig: Closure<View>? = nil,
                               configPropertyClosure: ((_ property: Property) -> Void)? = nil,
                               didSelect: (() -> Void)? = nil) {
+        
         self.cellType = cellType
-        configClosure = { view in
+        configClosure = { (_ collectionView: UICollectionView, _ view: UIView, _ indexPath: IndexPath) in
             if let vi = view as? View {
-                cellConfig?(vi)
+                cellConfig?(collectionView, vi, indexPath)
             } else {
                 fatalError("类型不一致")
             }

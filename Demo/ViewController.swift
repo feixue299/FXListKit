@@ -44,7 +44,7 @@ class ViewController: UIViewController {
             return strongSelf.model.textGroup.map { text in
                 Row(cellType: CollectionViewCellBox<UILabel>.self,
                     key: text,
-                    cellConfig: { view in
+                    cellConfig: { (collectionView,view,indexPath) in
                         view.backgroundColor = UIColor.white
                         view.customView.textAlignment = .center
                         view.customView.text = text
@@ -61,7 +61,7 @@ class ViewController: UIViewController {
             }
         }, Section { _ in
             [Row(cellType: CollectionViewCellBox<UILabel>.self,
-                 cellConfig: { view in
+                 cellConfig: { (collectionView,view,indexPath) in
                      view.backgroundColor = .white
                      view.customView.textAlignment = .left
                      view.customView.text = "single line"
@@ -79,7 +79,7 @@ class ViewController: UIViewController {
             strongSelf.model.imageGroup.map { image in
                 Row(cellType: CollectionViewCellBox<UIImageView>.self,
                     key: image,
-                    cellConfig: { view in
+                    cellConfig: { (collectionView,view,indexPath) in
                         view.customView.image = image
                     },
                     configPropertyClosure: { property in

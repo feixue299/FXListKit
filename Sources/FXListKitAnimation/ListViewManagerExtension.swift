@@ -27,7 +27,7 @@ public extension Row {
 
     convenience init<View: UIView, Key: Hashable>(cellType: View.Type,
                                                   key: Key,
-                                                  cellConfig: ((_ view: View) -> Void)? = nil,
+                                                  cellConfig: Closure<View>? = nil,
                                                   configPropertyClosure: ((_ property: Property) -> Void)? = nil,
                                                   didSelect: (() -> Void)? = nil) {
         self.init(cellType: cellType, cellConfig: cellConfig, configPropertyClosure: configPropertyClosure, didSelect: didSelect)

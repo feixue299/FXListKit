@@ -74,7 +74,7 @@ extension ListViewManager: UICollectionViewDataSource {
 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(row.cellType), for: indexPath)
 
-        row.configClosure?(cell)
+        row.configClosure?(collectionView, cell, indexPath)
 
         return cell
     }
