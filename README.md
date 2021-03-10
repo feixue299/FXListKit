@@ -78,7 +78,7 @@ class ViewController: UIViewController {
             property.minimumLineSpacing = 1
             property.inset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
             return strongSelf.model.textGroup.map { text in
-                Row(cellType: CollectionViewCellBox<UILabel>.self, cellConfig: { (view) in
+                Row(cellType: CollectionViewCellBox<UILabel>.self, cellConfig: { (collectionView,view,indexPath) in
                     view.backgroundColor = UIColor.white
                     view.customView.textAlignment = .center
                     view.customView.text = text
@@ -92,7 +92,7 @@ class ViewController: UIViewController {
                 })
             }
         }, Section { _ in
-            [Row(cellType: CollectionViewCellBox<UILabel>.self, cellConfig: { view in
+            [Row(cellType: CollectionViewCellBox<UILabel>.self, cellConfig: { (collectionView,view,indexPath) in
                 view.backgroundColor = .white
                 view.customView.textAlignment = .left
                 view.customView.text = "single line"
@@ -107,7 +107,7 @@ class ViewController: UIViewController {
         }, Section { _ in
             strongSelf.model.imageGroup.map { image in
                 Row(cellType: CollectionViewCellBox<UIImageView>.self,
-                    cellConfig: { view in
+                    cellConfig: { (collectionView,view,indexPath) in
                         view.customView.image = image
                     }, configPropertyClosure: { property in
                         property.size = .custom(size: image.size)
