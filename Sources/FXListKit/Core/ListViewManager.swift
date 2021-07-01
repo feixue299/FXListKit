@@ -104,27 +104,37 @@ extension ListViewManager: UICollectionViewDelegateFlowLayout {
         
         switch sectionGroup[indexPath.section].rows[indexPath.row].property.size {
         case let .section(value):
-            let sectionProperty = sectionGroup[indexPath.section].property
-            let itemSide: CGFloat
-            if let layout = collectionViewLayout as? UICollectionViewFlowLayout, layout.scrollDirection == .horizontal {
-                itemSide = collectionView.frame.height - sectionProperty.minimumInteritemSpacing * CGFloat(value - 1) - sectionProperty.inset.top - sectionProperty.inset.bottom
-            } else {
-                itemSide = collectionView.frame.width - sectionProperty.minimumInteritemSpacing * CGFloat(value - 1) - sectionProperty.inset.left - sectionProperty.inset.right
-            }
-            let remainder = Int(itemSide) % value
-            let side = Int(itemSide) / value
-            
-            if remainder > (indexPath.row) % value {
-                return CGSize(width: side + 1, height: side)
-            } else {
-                return CGSize(width: side, height: side)
-            }
+            return section(collectionView, layout: collectionViewLayout, indexPath: indexPath, value: value)
         case let .custom(size):
             return size
         case .single(let height):
             let sectionProperty = sectionGroup[indexPath.section].property
             let itemWidth = collectionView.frame.width - sectionProperty.inset.left - sectionProperty.inset.right
             return CGSize(width: itemWidth, height: height)
+        case .sectionCustomHeight(value: let value, height: let height):
+            let size = section(collectionView, layout: collectionViewLayout, indexPath: indexPath, value: value)
+            return CGSize(width: size.width, height: height)
+        case .sectionScale(value: let value, scale: let scale):
+            let size = section(collectionView, layout: collectionViewLayout, indexPath: indexPath, value: value)
+            return CGSize(width: size.width, height: size.width / scale)
+        }
+    }
+    
+    private func section(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, indexPath: IndexPath, value: Int) -> CGSize {
+        let sectionProperty = sectionGroup[indexPath.section].property
+        let itemSide: CGFloat
+        if let layout = collectionViewLayout as? UICollectionViewFlowLayout, layout.scrollDirection == .horizontal {
+            itemSide = collectionView.frame.height - sectionProperty.minimumInteritemSpacing * CGFloat(value - 1) - sectionProperty.inset.top - sectionProperty.inset.bottom
+        } else {
+            itemSide = collectionView.frame.width - sectionProperty.minimumInteritemSpacing * CGFloat(value - 1) - sectionProperty.inset.left - sectionProperty.inset.right
+        }
+        let remainder = Int(itemSide) % value
+        let width = Int(itemSide) / value
+        
+        if remainder > (indexPath.row) % value {
+            return CGSize(width: width + 1, height: width)
+        } else {
+            return CGSize(width: width, height: width)
         }
     }
 

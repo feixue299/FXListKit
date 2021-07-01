@@ -13,13 +13,16 @@ import UIKit
 
 public class Row {
     public class Property {
-        public enum Size {
+        public typealias Size = SizeType
+        public enum SizeType {
             case section(value: Int)
             case single(height: CGFloat)
             case custom(size: CGSize)
+            case sectionCustomHeight(value: Int, height: CGFloat)
+            case sectionScale(value: Int, scale: CGFloat)
         }
 
-        public var size: Size = .custom(size: CGSize(width: 60, height: 60))
+        public var size: SizeType = .custom(size: CGSize(width: 60, height: 60))
     }
 
     public typealias Closure<View> = (_ collectionView: UICollectionView, _ view: View, _ indexPath: IndexPath) -> Void
@@ -47,7 +50,7 @@ public class Row {
     }
 }
 
-extension Row.Property.Size: Hashable {
+extension Row.Property.SizeType: Hashable {
     public func hash(into hasher: inout Hasher) {
         switch self {
         case let .single(height):
@@ -56,6 +59,10 @@ extension Row.Property.Size: Hashable {
             hasher.combine("section:\(value)")
         case let .custom(size):
             hasher.combine("custom:\(size)")
+        case .sectionCustomHeight(value: let value, height: let height):
+            hasher.combine("sectionCustomHeight:\(value), height:\(height)")
+        case .sectionScale(value: let value, scale: let scale):
+            hasher.combine("sectionScale:\(value), scale:\(scale)")
         }
     }
 }
