@@ -19,11 +19,11 @@ Pod::Spec.new do |spec|
   spec.swift_version = '5.0'
 
   spec.subspec "Core" do |ss|
-    ss.source_files  = "Sources/FXListKit/Core/", "Sources/FXListKit/internal/", "Sources/FXListKit/Views/", "Sources/FXListKit/Bridge/"
+    ss.source_files  = "Sources/FXListKit/Core/", "Sources/FXListKit/internal/", "Sources/FXListKit/Utilities/", "Sources/FXListKit/Bridge/"
   end
 
   spec.subspec "Animation" do |ss|
-    ss.source_files = "Sources/FXListKitAnimation/", "Sources/FXListKit/Core/", "Sources/FXListKit/internal/", "Sources/FXListKit/Views/"
+    ss.source_files = "Sources/FXListKitAnimation/", "Sources/FXListKit/Core/", "Sources/FXListKit/internal/", "Sources/FXListKit/Utilities/"
     ss.dependency "DifferenceKit", "~> 1.1.5"
   end
 
