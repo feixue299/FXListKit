@@ -20,6 +20,7 @@ public class Row {
             case custom(size: CGSize)
             case sectionCustomHeight(value: Int, height: CGFloat)
             case sectionScale(value: Int, scale: CGFloat)
+            case sectionOffset(value: Int, offset: CGFloat)
         }
 
         public var size: SizeType = .custom(size: CGSize(width: 60, height: 60))
@@ -63,6 +64,8 @@ extension Row.Property.SizeType: Hashable {
             hasher.combine("sectionCustomHeight:\(value), height:\(height)")
         case .sectionScale(value: let value, scale: let scale):
             hasher.combine("sectionScale:\(value), scale:\(scale)")
+        case .sectionOffset(let value, let offset):
+            hasher.combine("sectionOffset:\(value), offset:\(offset)")
         }
     }
 }

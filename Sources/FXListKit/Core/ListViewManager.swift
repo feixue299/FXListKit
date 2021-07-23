@@ -101,8 +101,8 @@ extension ListViewManager: UICollectionViewDataSource {
 
 extension ListViewManager: UICollectionViewDelegateFlowLayout {
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        switch sectionGroup[indexPath.section].rows[indexPath.row].property.size {
+        let sizeType = sectionGroup[indexPath.section].rows[indexPath.row].property.size
+        switch sizeType {
         case let .section(value):
             return section(collectionView, layout: collectionViewLayout, indexPath: indexPath, value: value)
         case let .custom(size):
@@ -117,6 +117,9 @@ extension ListViewManager: UICollectionViewDelegateFlowLayout {
         case .sectionScale(value: let value, scale: let scale):
             let size = section(collectionView, layout: collectionViewLayout, indexPath: indexPath, value: value)
             return CGSize(width: size.width, height: size.width / scale)
+        case .sectionOffset(value: let value, offset: let offset):
+            let size = section(collectionView, layout: collectionViewLayout, indexPath: indexPath, value: value)
+            return CGSize(width: size.width, height: size.width + offset)
         }
     }
     
