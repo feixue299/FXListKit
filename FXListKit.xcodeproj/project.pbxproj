@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F30437923DC970B00003E3B /* FXListKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F30436F23DC970B00003E3B /* FXListKit.framework */; };
-		1F30438023DC970B00003E3B /* FXListKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F30437223DC970B00003E3B /* FXListKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1F3043A023DCE8FE00003E3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F30439F23DCE8FE00003E3B /* AppDelegate.swift */; };
 		1F3043A223DCE8FE00003E3B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3043A123DCE8FE00003E3B /* SceneDelegate.swift */; };
 		1F3043A423DCE8FE00003E3B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3043A323DCE8FE00003E3B /* ViewController.swift */; };
@@ -16,50 +14,18 @@
 		1F3043A923DCE90000003E3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F3043A823DCE90000003E3B /* Assets.xcassets */; };
 		1F3043AC23DCE90000003E3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F3043AA23DCE90000003E3B /* LaunchScreen.storyboard */; };
 		1F86367623DE0F3F00F58F3B /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F86367523DE0F3F00F58F3B /* CustomViewController.swift */; };
-		1F9382A6242C7987000C05CD /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F93829E242C7987000C05CD /* Section.swift */; };
-		1F9382A7242C7987000C05CD /* ListViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F93829F242C7987000C05CD /* ListViewManager.swift */; };
-		1F9382A8242C7987000C05CD /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9382A0242C7987000C05CD /* Row.swift */; };
-		1F9382A9242C7987000C05CD /* NSObject+FXClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F9382A2242C7987000C05CD /* NSObject+FXClass.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1F9382AA242C7987000C05CD /* NSObject+FXClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F9382A3242C7987000C05CD /* NSObject+FXClass.m */; };
-		1F9382AB242C7987000C05CD /* CollectionViewCellBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9382A5242C7987000C05CD /* CollectionViewCellBox.swift */; };
 		1F9382B9242C8668000C05CD /* FXListKitAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F9382B7242C8668000C05CD /* FXListKitAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1F9382C2242C867E000C05CD /* ListViewManagerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9382C1242C867E000C05CD /* ListViewManagerExtension.swift */; };
 		1F9382FF242DA670000C05CD /* RowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9382FE242DA670000C05CD /* RowTests.swift */; };
 		1F938301242DAE5E000C05CD /* SectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F938300242DAE5E000C05CD /* SectionTests.swift */; };
 		5231751BF8D12F1BBF95538C /* Pods_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B99F3BDCA8F396595F054F99 /* Pods_Demo.framework */; };
 		7A9CDC4A2E751CFFDF3DEC0B /* Pods_FXListKitAnimation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 438102A32CD7A89CA4559669 /* Pods_FXListKitAnimation.framework */; };
-		C34F0DFC2486631C0026F0EE /* FXListKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F30436F23DC970B00003E3B /* FXListKit.framework */; };
-		C34F0DFD2486631C0026F0EE /* FXListKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1F30436F23DC970B00003E3B /* FXListKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C34F0E002486631C0026F0EE /* FXListKitAnimation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F9382B5242C8668000C05CD /* FXListKitAnimation.framework */; };
 		C34F0E012486631C0026F0EE /* FXListKitAnimation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1F9382B5242C8668000C05CD /* FXListKitAnimation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C34F0E08248663C90026F0EE /* OCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C34F0E07248663C90026F0EE /* OCViewController.m */; };
-		C34F0E0D248669210026F0EE /* SectionBridgeOC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34F0E0A248669210026F0EE /* SectionBridgeOC.swift */; };
-		C34F0E0E248669210026F0EE /* ListViewManagerBridgeOC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34F0E0B248669210026F0EE /* ListViewManagerBridgeOC.swift */; };
-		C34F0E0F248669210026F0EE /* RowBridgeOC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34F0E0C248669210026F0EE /* RowBridgeOC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1F30437A23DC970B00003E3B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1F30436623DC970B00003E3B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1F30436E23DC970B00003E3B;
-			remoteInfo = FXListKit;
-		};
-		1F9382E8242CA0EA000C05CD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1F30436623DC970B00003E3B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1F30436E23DC970B00003E3B;
-			remoteInfo = FXListKit;
-		};
-		C34F0DFE2486631C0026F0EE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1F30436623DC970B00003E3B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1F30436E23DC970B00003E3B;
-			remoteInfo = FXListKit;
-		};
 		C34F0E022486631C0026F0EE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1F30436623DC970B00003E3B /* Project object */;
@@ -77,7 +43,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				C34F0E012486631C0026F0EE /* FXListKitAnimation.framework in Embed Frameworks */,
-				C34F0DFD2486631C0026F0EE /* FXListKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -85,9 +50,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1F30436F23DC970B00003E3B /* FXListKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FXListKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1F30437223DC970B00003E3B /* FXListKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FXListKit.h; sourceTree = "<group>"; };
-		1F30437323DC970B00003E3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F30437823DC970B00003E3B /* FXListKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FXListKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F30437F23DC970B00003E3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F30438E23DC9B1D00003E3B /* FXListKitTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FXListKitTests-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -100,12 +62,6 @@
 		1F3043AB23DCE90000003E3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F3043AD23DCE90000003E3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F86367523DE0F3F00F58F3B /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
-		1F93829E242C7987000C05CD /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
-		1F93829F242C7987000C05CD /* ListViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewManager.swift; sourceTree = "<group>"; };
-		1F9382A0242C7987000C05CD /* Row.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Row.swift; sourceTree = "<group>"; };
-		1F9382A2242C7987000C05CD /* NSObject+FXClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+FXClass.h"; sourceTree = "<group>"; };
-		1F9382A3242C7987000C05CD /* NSObject+FXClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FXClass.m"; sourceTree = "<group>"; };
-		1F9382A5242C7987000C05CD /* CollectionViewCellBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCellBox.swift; sourceTree = "<group>"; };
 		1F9382B5242C8668000C05CD /* FXListKitAnimation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FXListKitAnimation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F9382B7242C8668000C05CD /* FXListKitAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FXListKitAnimation.h; sourceTree = "<group>"; };
 		1F9382B8242C8668000C05CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -124,25 +80,14 @@
 		C34F0E05248663C80026F0EE /* Demo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Demo-Bridging-Header.h"; sourceTree = "<group>"; };
 		C34F0E06248663C90026F0EE /* OCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCViewController.h; sourceTree = "<group>"; };
 		C34F0E07248663C90026F0EE /* OCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCViewController.m; sourceTree = "<group>"; };
-		C34F0E0A248669210026F0EE /* SectionBridgeOC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionBridgeOC.swift; sourceTree = "<group>"; };
-		C34F0E0B248669210026F0EE /* ListViewManagerBridgeOC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewManagerBridgeOC.swift; sourceTree = "<group>"; };
-		C34F0E0C248669210026F0EE /* RowBridgeOC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RowBridgeOC.swift; sourceTree = "<group>"; };
 		EE17D525CF89270B4F1645BF /* Pods-FXListKitAnimation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FXListKitAnimation.debug.xcconfig"; path = "Target Support Files/Pods-FXListKitAnimation/Pods-FXListKitAnimation.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1F30436C23DC970B00003E3B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		1F30437523DC970B00003E3B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F30437923DC970B00003E3B /* FXListKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,7 +97,6 @@
 			files = (
 				5231751BF8D12F1BBF95538C /* Pods_Demo.framework in Frameworks */,
 				C34F0E002486631C0026F0EE /* FXListKitAnimation.framework in Frameworks */,
-				C34F0DFC2486631C0026F0EE /* FXListKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,7 +114,6 @@
 		1F30436523DC970B00003E3B = {
 			isa = PBXGroup;
 			children = (
-				1F30437123DC970B00003E3B /* FXListKit */,
 				1F30437C23DC970B00003E3B /* FXListKitTests */,
 				1F30439E23DCE8FE00003E3B /* Demo */,
 				1F9382B6242C8668000C05CD /* FXListKitAnimation */,
@@ -183,25 +126,11 @@
 		1F30437023DC970B00003E3B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1F30436F23DC970B00003E3B /* FXListKit.framework */,
 				1F30437823DC970B00003E3B /* FXListKitTests.xctest */,
 				1F30439D23DCE8FD00003E3B /* Demo.app */,
 				1F9382B5242C8668000C05CD /* FXListKitAnimation.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		1F30437123DC970B00003E3B /* FXListKit */ = {
-			isa = PBXGroup;
-			children = (
-				C34F0E09248669210026F0EE /* Bridge */,
-				1F93829D242C7987000C05CD /* Core */,
-				1F9382A1242C7987000C05CD /* internal */,
-				1F9382A4242C7987000C05CD /* Views */,
-				1F30437223DC970B00003E3B /* FXListKit.h */,
-				1F30437323DC970B00003E3B /* Info.plist */,
-			);
-			path = FXListKit;
 			sourceTree = "<group>";
 		};
 		1F30437C23DC970B00003E3B /* FXListKitTests */ = {
@@ -244,36 +173,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		1F93829D242C7987000C05CD /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				1F93829E242C7987000C05CD /* Section.swift */,
-				1F93829F242C7987000C05CD /* ListViewManager.swift */,
-				1F9382A0242C7987000C05CD /* Row.swift */,
-			);
-			name = Core;
-			path = Sources/FXListKit/Core;
-			sourceTree = SOURCE_ROOT;
-		};
-		1F9382A1242C7987000C05CD /* internal */ = {
-			isa = PBXGroup;
-			children = (
-				1F9382A2242C7987000C05CD /* NSObject+FXClass.h */,
-				1F9382A3242C7987000C05CD /* NSObject+FXClass.m */,
-			);
-			name = internal;
-			path = Sources/FXListKit/internal;
-			sourceTree = SOURCE_ROOT;
-		};
-		1F9382A4242C7987000C05CD /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				1F9382A5242C7987000C05CD /* CollectionViewCellBox.swift */,
-			);
-			name = Views;
-			path = Sources/FXListKit/Views;
-			sourceTree = SOURCE_ROOT;
-		};
 		1F9382B6242C8668000C05CD /* FXListKitAnimation */ = {
 			isa = PBXGroup;
 			children = (
@@ -297,29 +196,9 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		C34F0E09248669210026F0EE /* Bridge */ = {
-			isa = PBXGroup;
-			children = (
-				C34F0E0A248669210026F0EE /* SectionBridgeOC.swift */,
-				C34F0E0B248669210026F0EE /* ListViewManagerBridgeOC.swift */,
-				C34F0E0C248669210026F0EE /* RowBridgeOC.swift */,
-			);
-			name = Bridge;
-			path = Sources/FXListKit/Bridge;
-			sourceTree = SOURCE_ROOT;
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		1F30436A23DC970B00003E3B /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1F30438023DC970B00003E3B /* FXListKit.h in Headers */,
-				1F9382A9242C7987000C05CD /* NSObject+FXClass.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		1F9382B0242C8668000C05CD /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -331,26 +210,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		1F30436E23DC970B00003E3B /* FXListKit */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1F30438323DC970B00003E3B /* Build configuration list for PBXNativeTarget "FXListKit" */;
-			buildPhases = (
-				1F30436A23DC970B00003E3B /* Headers */,
-				1F30436B23DC970B00003E3B /* Sources */,
-				1F30436C23DC970B00003E3B /* Frameworks */,
-				1F30436D23DC970B00003E3B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = FXListKit;
-			packageProductDependencies = (
-			);
-			productName = FXListKit;
-			productReference = 1F30436F23DC970B00003E3B /* FXListKit.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		1F30437723DC970B00003E3B /* FXListKitTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F30438623DC970B00003E3B /* Build configuration list for PBXNativeTarget "FXListKitTests" */;
@@ -362,7 +221,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				1F30437B23DC970B00003E3B /* PBXTargetDependency */,
 			);
 			name = FXListKitTests;
 			productName = FXListKitTests;
@@ -383,7 +241,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				C34F0DFF2486631C0026F0EE /* PBXTargetDependency */,
 				C34F0E032486631C0026F0EE /* PBXTargetDependency */,
 			);
 			name = Demo;
@@ -404,7 +261,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				1F9382E9242CA0EA000C05CD /* PBXTargetDependency */,
 			);
 			name = FXListKitAnimation;
 			productName = FXListKitAnimation;
@@ -421,10 +277,6 @@
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = Mr.wu;
 				TargetAttributes = {
-					1F30436E23DC970B00003E3B = {
-						CreatedOnToolsVersion = 11.3.1;
-						LastSwiftMigration = 1130;
-					};
 					1F30437723DC970B00003E3B = {
 						CreatedOnToolsVersion = 11.3.1;
 						LastSwiftMigration = 1130;
@@ -454,7 +306,6 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1F30436E23DC970B00003E3B /* FXListKit */,
 				1F30437723DC970B00003E3B /* FXListKitTests */,
 				1F30439C23DCE8FD00003E3B /* Demo */,
 				1F9382B4242C8668000C05CD /* FXListKitAnimation */,
@@ -463,13 +314,6 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1F30436D23DC970B00003E3B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		1F30437623DC970B00003E3B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -561,21 +405,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1F30436B23DC970B00003E3B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C34F0E0E248669210026F0EE /* ListViewManagerBridgeOC.swift in Sources */,
-				C34F0E0D248669210026F0EE /* SectionBridgeOC.swift in Sources */,
-				1F9382AA242C7987000C05CD /* NSObject+FXClass.m in Sources */,
-				C34F0E0F248669210026F0EE /* RowBridgeOC.swift in Sources */,
-				1F9382AB242C7987000C05CD /* CollectionViewCellBox.swift in Sources */,
-				1F9382A7242C7987000C05CD /* ListViewManager.swift in Sources */,
-				1F9382A8242C7987000C05CD /* Row.swift in Sources */,
-				1F9382A6242C7987000C05CD /* Section.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		1F30437423DC970B00003E3B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -608,21 +437,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1F30437B23DC970B00003E3B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1F30436E23DC970B00003E3B /* FXListKit */;
-			targetProxy = 1F30437A23DC970B00003E3B /* PBXContainerItemProxy */;
-		};
-		1F9382E9242CA0EA000C05CD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1F30436E23DC970B00003E3B /* FXListKit */;
-			targetProxy = 1F9382E8242CA0EA000C05CD /* PBXContainerItemProxy */;
-		};
-		C34F0DFF2486631C0026F0EE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1F30436E23DC970B00003E3B /* FXListKit */;
-			targetProxy = C34F0DFE2486631C0026F0EE /* PBXContainerItemProxy */;
-		};
 		C34F0E032486631C0026F0EE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 1F9382B4242C8668000C05CD /* FXListKitAnimation */;
@@ -767,61 +581,6 @@
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		1F30438423DC970B00003E3B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = "";
-				INFOPLIST_FILE = FXListKit/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.wpf.FXListKit;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SUPPORTS_MACCATALYST = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		1F30438523DC970B00003E3B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = "";
-				INFOPLIST_FILE = FXListKit/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.wpf.FXListKit;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SUPPORTS_MACCATALYST = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -990,15 +749,6 @@
 			buildConfigurations = (
 				1F30438123DC970B00003E3B /* Debug */,
 				1F30438223DC970B00003E3B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1F30438323DC970B00003E3B /* Build configuration list for PBXNativeTarget "FXListKit" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1F30438423DC970B00003E3B /* Debug */,
-				1F30438523DC970B00003E3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

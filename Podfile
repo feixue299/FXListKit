@@ -5,6 +5,7 @@ use_frameworks!
 
 def dependency
   pod 'DifferenceKit'
+  pod 'FXListKit', :path => '../FXListKit'
 end
 
 target 'Demo' do

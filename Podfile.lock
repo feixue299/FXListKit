@@ -5,17 +5,26 @@ PODS:
   - DifferenceKit/Core (1.1.5)
   - DifferenceKit/UIKitExtension (1.1.5):
     - DifferenceKit/Core
+  - FXListKit (1.2.0):
+    - FXListKit/Core (= 1.2.0)
+  - FXListKit/Core (1.2.0)
 
 DEPENDENCIES:
   - DifferenceKit
+  - FXListKit (from `../FXListKit`)
 
 SPEC REPOS:
   trunk:
     - DifferenceKit
 
+EXTERNAL SOURCES:
+  FXListKit:
+    :path: "../FXListKit"
+
 SPEC CHECKSUMS:
   DifferenceKit: 516f12e336ed65a3a0665847b5c3cb5cad4bd4ea
+  FXListKit: 727af80554a180550647a739432cc70f016d412a
 
-PODFILE CHECKSUM: 12fcf29c6b447c6e7f7e449a941b539ceaae10cb
+PODFILE CHECKSUM: 13f00f648d0fe0e24c39876805f2098340ed857a
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.10.1
