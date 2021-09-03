@@ -15,6 +15,7 @@ public class Row {
     public class Property {
         public typealias Size = SizeType
         public enum SizeType {
+            case singleAutoHeight
             case section(value: Int)
             case single(height: CGFloat)
             case custom(size: CGSize)
@@ -66,6 +67,8 @@ extension Row.Property.SizeType: Hashable {
             hasher.combine("sectionScale:\(value), scale:\(scale)")
         case .sectionOffset(let value, let offset):
             hasher.combine("sectionOffset:\(value), offset:\(offset)")
+        case .singleAutoHeight:
+            hasher.combine("singleAutoHeight")
         }
     }
 }

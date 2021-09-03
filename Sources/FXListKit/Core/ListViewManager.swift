@@ -37,6 +37,11 @@ public class ListViewManager: NSObject {
         view.delegate = self
         view.dataSource = self
         collectionView = view
+        if #available(iOS 10.0, *) {
+            (collectionView?.collectionViewLayout as? UICollectionViewFlowLayout)?.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+        } else {
+            
+        }
     }
     
     public func reloadData() {
@@ -59,21 +64,9 @@ extension ListViewManager: UICollectionViewDataSource {
     }
 
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+
         let row = sectionGroup[indexPath.section].rows[indexPath.row]
-
-        let reuseIdentifier = NSStringFromClass(row.cellType)
-        if !_registerReuseIdentifierGroup.contains(reuseIdentifier) {
-            _registerReuseIdentifierGroup.append(reuseIdentifier)
-
-            if NSObject.verifyClass(row.cellType, isSubclassOf: UICollectionViewCell.self) {
-                collectionView.register(row.cellType, forCellWithReuseIdentifier: reuseIdentifier)
-            } else {
-                fatalError("不是UICollectionViewCell的子类")
-            }
-        }
-
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(row.cellType), for: indexPath)
-
+        let cell = __collectionView(collectionView, for: indexPath)
         row.configClosure?(collectionView, cell, indexPath)
 
         return cell
@@ -96,6 +89,24 @@ extension ListViewManager: UICollectionViewDataSource {
 
     public func collectionView(_ collectionView: UICollectionView, indexPathForIndexTitle title: String, at index: Int) -> IndexPath {
         return IndexPath()
+    }
+    
+    private func __collectionView(_ collectionView: UICollectionView, for indexPath: IndexPath) -> UICollectionViewCell {
+        let row = sectionGroup[indexPath.section].rows[indexPath.row]
+
+        let reuseIdentifier = NSStringFromClass(row.cellType)
+        if !_registerReuseIdentifierGroup.contains(reuseIdentifier) {
+            _registerReuseIdentifierGroup.append(reuseIdentifier)
+
+            if NSObject.verifyClass(row.cellType, isSubclassOf: UICollectionViewCell.self) {
+                collectionView.register(row.cellType, forCellWithReuseIdentifier: reuseIdentifier)
+            } else {
+                fatalError("不是UICollectionViewCell的子类")
+            }
+        }
+
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(row.cellType), for: indexPath)
+        return cell
     }
 }
 
@@ -120,6 +131,10 @@ extension ListViewManager: UICollectionViewDelegateFlowLayout {
         case .sectionOffset(value: let value, offset: let offset):
             let size = section(collectionView, layout: collectionViewLayout, indexPath: indexPath, value: value)
             return CGSize(width: size.width, height: size.width + offset)
+        case .singleAutoHeight:
+            let sectionProperty = sectionGroup[indexPath.section].property
+            let itemWidth = collectionView.frame.width - sectionProperty.inset.left - sectionProperty.inset.right
+            return CGSize(width: itemWidth, height: 1000)
         }
     }
     
