@@ -37,11 +37,6 @@ public class ListViewManager: NSObject {
         view.delegate = self
         view.dataSource = self
         collectionView = view
-        if #available(iOS 10.0, *) {
-            (collectionView?.collectionViewLayout as? UICollectionViewFlowLayout)?.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
-        } else {
-            
-        }
     }
     
     public func reloadData() {
@@ -132,6 +127,9 @@ extension ListViewManager: UICollectionViewDelegateFlowLayout {
             let size = section(collectionView, layout: collectionViewLayout, indexPath: indexPath, value: value)
             return CGSize(width: size.width, height: size.width + offset)
         case .singleAutoHeight:
+            if #available(iOS 10.0, *) {
+                (collectionView.collectionViewLayout as? UICollectionViewFlowLayout)?.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+            }
             let sectionProperty = sectionGroup[indexPath.section].property
             let itemWidth = collectionView.frame.width - sectionProperty.inset.left - sectionProperty.inset.right
             return CGSize(width: itemWidth, height: 1000)
