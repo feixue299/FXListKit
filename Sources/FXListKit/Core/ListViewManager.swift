@@ -37,15 +37,28 @@ public class ListViewManager: NSObject {
         view.delegate = self
         view.dataSource = self
         collectionView = view
+        updateCollectionViewState()
     }
     
     public func reloadData() {
         generateDataSource()
+        updateCollectionViewState()
         collectionView?.reloadData()
     }
     
     public func generateDataSource() {
         self.sectionGroup = self.sectionGroupClosure()
+    }
+    
+    private func updateCollectionViewState() {
+        var rows = self.sectionGroup.reduce([], { $0 + $1.rows })
+        if rows.contains(where: { $0.property.size == .singleAutoHeight }) {
+            if #available(iOS 10.0, *) {
+                (collectionView?.collectionViewLayout as? UICollectionViewFlowLayout)?.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+            }
+        } else {
+            (collectionView?.collectionViewLayout as? UICollectionViewFlowLayout)?.estimatedItemSize = CGSize.zero
+        }
     }
 }
 
@@ -127,9 +140,6 @@ extension ListViewManager: UICollectionViewDelegateFlowLayout {
             let size = section(collectionView, layout: collectionViewLayout, indexPath: indexPath, value: value)
             return CGSize(width: size.width, height: size.width + offset)
         case .singleAutoHeight:
-            if #available(iOS 10.0, *) {
-                (collectionView.collectionViewLayout as? UICollectionViewFlowLayout)?.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
-            }
             let sectionProperty = sectionGroup[indexPath.section].property
             let itemWidth = collectionView.frame.width - sectionProperty.inset.left - sectionProperty.inset.right
             return CGSize(width: itemWidth, height: 1000)
