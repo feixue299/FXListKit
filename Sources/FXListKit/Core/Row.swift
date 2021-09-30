@@ -24,7 +24,13 @@ public class Row {
             case sectionOffset(value: Int, offset: CGFloat)
         }
 
+        public enum IdentityType {
+            case `default`
+            case unique
+        }
+        
         public var size: SizeType = .custom(size: CGSize(width: 60, height: 60))
+        public var identityType: IdentityType = .default
     }
 
     public typealias Closure<View> = (_ collectionView: UICollectionView, _ view: View, _ indexPath: IndexPath) -> Void

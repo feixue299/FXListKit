@@ -102,7 +102,14 @@ extension ListViewManager: UICollectionViewDataSource {
     private func __collectionView(_ collectionView: UICollectionView, for indexPath: IndexPath) -> UICollectionViewCell {
         let row = sectionGroup[indexPath.section].rows[indexPath.row]
 
-        let reuseIdentifier = NSStringFromClass(row.cellType)
+        let reuseIdentifier: String
+        switch row.property.identityType {
+        case .default:
+            reuseIdentifier = NSStringFromClass(row.cellType)
+        case .unique:
+            reuseIdentifier = "\(NSStringFromClass(row.cellType))-\(indexPath.section)-\(indexPath.row)"
+        }
+        
         if !_registerReuseIdentifierGroup.contains(reuseIdentifier) {
             _registerReuseIdentifierGroup.append(reuseIdentifier)
 
@@ -113,7 +120,9 @@ extension ListViewManager: UICollectionViewDataSource {
             }
         }
 
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(row.cellType), for: indexPath)
+        
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
         return cell
     }
 }
