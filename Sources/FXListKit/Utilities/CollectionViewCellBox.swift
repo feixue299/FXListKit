@@ -10,11 +10,11 @@
 
 import UIKit
 
-public class CollectionViewCellBox<View: UIView>: UICollectionViewCell {
+open class CollectionViewCellBox<View: UIView>: UICollectionViewCell {
     
     public var customView: View
     
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         customView = View()
         super.init(frame: frame)
         customView.translatesAutoresizingMaskIntoConstraints = false
@@ -26,7 +26,7 @@ public class CollectionViewCellBox<View: UIView>: UICollectionViewCell {
             customView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)])
     }
     
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
