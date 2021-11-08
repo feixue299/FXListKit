@@ -75,7 +75,7 @@ open class CollectionViewCellBox<View: UIView>: UICollectionViewCell {
     }
     
     @available(iOS 13.0, *)
-    public func configWithPublisher<T: Publisher>(_ publisher: T, callback: CellPublisherChannel.CallBack<T>?) -> CellPublisherChannel<View> where T.Failure == Never {
+    public func configWithPublisher<T: Publisher>(_ publisher: T, callback: ((_ view: View, _ value: T.Output) -> Void)?) -> CellPublisherChannel<View> where T.Failure == Never {
         let _channel = CellPublisherChannel(view: customView)
         _channel.initPublisher(publisher, callback: callback)
         channel = _channel
