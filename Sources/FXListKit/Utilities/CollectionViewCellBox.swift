@@ -13,6 +13,9 @@ import Combine
 
 @available(iOS 13.0, *)
 public class CellPublisherChannel<View> {
+    
+    public typealias CallBack<T: Publisher> = (_ view: View, _ value: T.Output) -> Void
+    
     private var cancellable: [AnyCancellable] = []
     private let view: View
     
@@ -20,17 +23,16 @@ public class CellPublisherChannel<View> {
         self.view = view
     }
     
-    func initPublisher<T: Publisher>(_ publisher: T, callback: ((View, T.Output) -> Void)?) -> Self where T.Failure == Never {
+    func initPublisher<T: Publisher>(_ publisher: T, callback: CallBack<T>?) where T.Failure == Never {
         cancellable = [
             publisher.sink { [weak self] value in
                 guard let self = self else { return }
                 callback?(self.view, value)
             }
         ]
-        return self
     }
     
-    public func appendPublisher<T: Publisher>(_ publisher: T, callback: ((View, T.Output) -> Void)?) -> Self where T.Failure == Never {
+    public func appendPublisher<T: Publisher>(_ publisher: T, callback: CallBack<T>?) -> Self where T.Failure == Never {
         cancellable.append(
             publisher.sink { [weak self] value in
                 guard let self = self else { return }
@@ -73,7 +75,7 @@ open class CollectionViewCellBox<View: UIView>: UICollectionViewCell {
     }
     
     @available(iOS 13.0, *)
-    public func configWithPublisher<T: Publisher>(_ publisher: T, callback: ((View, T.Output) -> Void)?) -> CellPublisherChannel<View> where T.Failure == Never {
+    public func configWithPublisher<T: Publisher>(_ publisher: T, callback: CellPublisherChannel.CallBack<T>?) -> CellPublisherChannel<View> where T.Failure == Never {
         let _channel = CellPublisherChannel(view: customView)
         _channel.initPublisher(publisher, callback: callback)
         channel = _channel
