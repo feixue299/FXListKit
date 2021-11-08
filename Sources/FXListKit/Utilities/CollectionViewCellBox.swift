@@ -32,6 +32,7 @@ public class CellPublisherChannel<View> {
         ]
     }
     
+    @discardableResult
     public func appendPublisher<T: Publisher>(_ publisher: T, callback: CallBack<T>?) -> Self where T.Failure == Never {
         cancellable.append(
             publisher.sink { [weak self] value in
@@ -75,6 +76,7 @@ open class CollectionViewCellBox<View: UIView>: UICollectionViewCell {
     }
     
     @available(iOS 13.0, *)
+    @discardableResult
     public func configWithPublisher<T: Publisher>(_ publisher: T, callback: ((_ view: View, _ value: T.Output) -> Void)?) -> CellPublisherChannel<View> where T.Failure == Never {
         let _channel = CellPublisherChannel(view: customView)
         _channel.initPublisher(publisher, callback: callback)
