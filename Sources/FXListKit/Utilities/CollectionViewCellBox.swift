@@ -9,10 +9,12 @@
 #if os(iOS)
 
 import UIKit
+import Combine
 
 open class CollectionViewCellBox<View: UIView>: UICollectionViewCell {
     
     public var customView: View
+    private var cancellable: Any?
     
     public override init(frame: CGRect) {
         customView = View()
@@ -38,6 +40,14 @@ open class CollectionViewCellBox<View: UIView>: UICollectionViewCell {
         autoLayoutAttributes.frame = autoLayoutFrame
         
         return autoLayoutAttributes
+    }
+    
+    @available(iOS 13.0, *)
+    public func configWithPublisher<T: Publisher>(_ publisher: T, callback: ((View, T.Output) -> Void)?) where T.Failure == Never {
+        cancellable = publisher.sink { [weak self] value in
+            guard let self = self else { return }
+            callback?(self.customView, value)
+        }
     }
     
 }
