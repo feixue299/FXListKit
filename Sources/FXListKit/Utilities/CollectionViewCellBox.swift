@@ -11,10 +11,40 @@
 import UIKit
 import Combine
 
+@available(iOS 13.0, *)
+public class CellPublisherChannel<View> {
+    private var cancellable: [AnyCancellable] = []
+    private let view: View
+    
+    init(view: View) {
+        self.view = view
+    }
+    
+    func initPublisher<T: Publisher>(_ publisher: T, callback: ((View, T.Output) -> Void)?) -> Self where T.Failure == Never {
+        cancellable = [
+            publisher.sink { [weak self] value in
+                guard let self = self else { return }
+                callback?(self.view, value)
+            }
+        ]
+        return self
+    }
+    
+    public func appendPublisher<T: Publisher>(_ publisher: T, callback: ((View, T.Output) -> Void)?) -> Self where T.Failure == Never {
+        cancellable.append(
+            publisher.sink { [weak self] value in
+                guard let self = self else { return }
+                callback?(self.view, value)
+            }
+        )
+        return self
+    }
+}
+ 
 open class CollectionViewCellBox<View: UIView>: UICollectionViewCell {
     
     public var customView: View
-    private var cancellable: Any?
+    private var channel: Any?
     
     public override init(frame: CGRect) {
         customView = View()
@@ -43,11 +73,11 @@ open class CollectionViewCellBox<View: UIView>: UICollectionViewCell {
     }
     
     @available(iOS 13.0, *)
-    public func configWithPublisher<T: Publisher>(_ publisher: T, callback: ((View, T.Output) -> Void)?) where T.Failure == Never {
-        cancellable = publisher.sink { [weak self] value in
-            guard let self = self else { return }
-            callback?(self.customView, value)
-        }
+    public func configWithPublisher<T: Publisher>(_ publisher: T, callback: ((View, T.Output) -> Void)?) -> CellPublisherChannel<View> where T.Failure == Never {
+        let _channel = CellPublisherChannel(view: customView)
+        _channel.initPublisher(publisher, callback: callback)
+        channel = _channel
+        return _channel
     }
     
 }
