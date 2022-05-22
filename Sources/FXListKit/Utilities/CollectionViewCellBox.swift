@@ -23,7 +23,8 @@ public class CellPublisherChannel<View> {
         self.view = view
     }
     
-    func initPublisher<T: Publisher>(_ publisher: T, callback: CallBack<T>?) where T.Failure == Never {
+    func initPublisher<T: Publisher>(_ publisher: T?, callback: CallBack<T>?) where T.Failure == Never {
+        guard let publisher = publisher else { return }
         cancellable = [
             publisher.sink { [weak self] value in
                 guard let self = self else { return }
@@ -33,7 +34,8 @@ public class CellPublisherChannel<View> {
     }
     
     @discardableResult
-    public func appendPublisher<T: Publisher>(_ publisher: T, callback: CallBack<T>?) -> Self where T.Failure == Never {
+    public func appendPublisher<T: Publisher>(_ publisher: T?, callback: CallBack<T>?) -> Self where T.Failure == Never {
+        guard let publisher = publisher else { return self }
         cancellable.append(
             publisher.sink { [weak self] value in
                 guard let self = self else { return }
