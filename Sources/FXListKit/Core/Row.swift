@@ -20,6 +20,7 @@ public class Row {
             case single(height: CGFloat)
             case custom(size: CGSize)
             case sectionCustomHeight(value: Int, height: CGFloat)
+            /// scale : width / height
             case sectionScale(value: Int, scale: CGFloat)
             case sectionOffset(value: Int, offset: CGFloat)
         }
