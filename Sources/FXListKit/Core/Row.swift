@@ -35,16 +35,17 @@ public class Row {
     }
 
     public typealias Closure<View> = (_ collectionView: UICollectionView, _ view: View, _ indexPath: IndexPath) -> Void
+    public typealias SelectClosure = ((IndexPath) -> Void)
     
     public let cellType: AnyClass
     public let configClosure: Closure<UIView>?
     public let property = Property()
-    public let didSelect: (() -> Void)?
+    public let didSelect: SelectClosure?
 
     public init<View: UIView>(cellType: View.Type,
                               cellConfig: Closure<View>? = nil,
                               configPropertyClosure: ((_ property: Property) -> Void)? = nil,
-                              didSelect: (() -> Void)? = nil) {
+                              didSelect: SelectClosure? = nil) {
         
         self.cellType = cellType
         configClosure = { (_ collectionView: UICollectionView, _ view: UIView, _ indexPath: IndexPath) in

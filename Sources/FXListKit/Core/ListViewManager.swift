@@ -216,7 +216,7 @@ extension ListViewManager: UICollectionViewDelegate {
     }
     
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        sectionGroup[indexPath.section].rows[indexPath.row].didSelect?()
+        sectionGroup[indexPath.section].rows[indexPath.row].didSelect?(indexPath)
     }
     
     public func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
