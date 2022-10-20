@@ -29,7 +29,7 @@ public extension Row {
                                                   key: Key,
                                                   cellConfig: Closure<View>? = nil,
                                                   configPropertyClosure: ((_ property: Property) -> Void)? = nil,
-                                                  didSelect: (() -> Void)? = nil) {
+                                                  didSelect: SelectClosure? = nil) {
         self.init(cellType: cellType, cellConfig: cellConfig, configPropertyClosure: configPropertyClosure, didSelect: didSelect)
         self.key = key.hashValue
     }
