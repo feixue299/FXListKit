@@ -34,7 +34,7 @@ public class Row {
         public var identityType: IdentityType = .default
     }
 
-    public typealias Closure<View> = (_ collectionView: UICollectionView, _ view: View, _ indexPath: IndexPath) -> Void
+    public typealias Closure<View> = (_ collectionView: UICollectionView, _ cell: View, _ indexPath: IndexPath) -> Void
     public typealias SelectClosure = ((IndexPath) -> Void)
     
     public let cellType: AnyClass

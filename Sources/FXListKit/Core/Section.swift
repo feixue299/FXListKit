@@ -28,6 +28,11 @@ public struct Section {
         self.property = Property()
         self.rows = rows(self.property)
     }
+    
+    public init(_ rows: @escaping (Property) -> Row) {
+        self.property = Property()
+        self.rows = [rows(self.property)]
+    }
 }
 
 extension Section.Property: Hashable {
